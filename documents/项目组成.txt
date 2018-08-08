@@ -1,0 +1,28 @@
+|- documents/                   //相关文档资料
+	|- 前端开发规范
+	|- 项目组成
+|- pages/                       //页面文件夹
+	|- item/                    //商品相关文件夹
+		|- detail.html          //商品详细信息页
+		|- list.html            //商品列表页
+	|- order/                   //订单相关文件夹
+		|- confirm.html         //确认支付页面
+		|- myList.html          //我的订单页面
+		|- topay.html           //支付页面
+	|- user/                    //用户相关文件夹
+		|- index.html           //个人中心页
+		|- info.html            //个人信息页
+		|- collecion.html       //我的收藏页
+	|- msgcenter.html           //消息通知页
+	|- cart.html                //购物车页
+	|- login.html               //登录页
+	|- register.html            //注册页
+|- public/                      //公共文件夹
+	|- fonts/                   //字体图标文件夹
+	|- images/                  //图片文件夹
+	|- lib/                     //js插件/库夹
+	|- script/                  //js脚本文件夹
+	|- style/                   //样式文件夹
+|- gulpfile.js                  //gulpfile.js
+|- index.html                   //首页
+|- package.json                 //package.json

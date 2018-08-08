@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "search_suggest": [
+    {
+      "id": 1,
+      "keyword": "【镜架系列】20g 轻质TR方形眼镜架",
+      "isDefault": "true"
+    },
+    {
+      "id": 3,
+      "keyword": "服饰季末特惠",
+      "isHighlight": true
+    },
+    {
+      "id": 4,
+      "keyword": "服饰季末特惠2",
+      "isHighlight": true
+    },
+    {
+      "id": 5,
+      "keyword": "服饰季末特惠3"
+    },
+    {
+      "id": 6,
+      "keyword": "服饰季末特惠4",
+      "isHighlight": true
+    },
+    {
+      "id": 7,
+      "keyword": "服饰季末特惠5",
+      "isHighlight": true
+    }
+  ]
+}
