@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 登录模态框 -->
+	<div class="yx-login-wrap">
+		<div class="login-box">
+			<div class="wrap-header">
+				<div class="login-hd">
+					<div class="hd-title mail-login-hd">邮箱登录</div>
+				</div>
+				<div class="close">&times;</div>
+			</div>
+			<div id="mail-login-box" class="yx-loading">
+				<div class="login-box-bd">
+					<form action="/login.html" id="loginForm" name="loginForm" class="form">
+						<div class="form-control">
+							<div class="fc-icon"><i class="iconfont icon-user"></i></div>
+							<div class="fc-input">
+								<input type="text" name="username" id="username" autocomplete="off" maxlength="35" placeholder="请输入邮箱">
+								<span class="clear"><i class="iconfont icon-close"></i></span>
+							</div>
+						</div>
+						<div class="form-control">
+							<div class="fc-icon"><i class="iconfont icon-password"></i></div>
+							<div class="fc-input">
+								<input type="password" name="password" id="password" autocomplete="off" maxlength="20" placeholder="请输入密码">
+								<span class="clear"><i class="iconfont icon-close"></i></span>
+							</div>
+						</div>
+						<div class="error-tips">
+							<!-- <p><i class="iconfont icon-tip"></i><span class="error-type">账号或密码错误</span></p> -->
+						</div>
+						<div class="form-control-btn">
+							<input type="submit" value="登 录" id="login-submit" class="btn-submit">
+						</div>
+					</form>
+				</div>
+				<div class="login-box-ft">
+					<div class="ft-row">
+						<ul class="other-login-list yx-fl-left">
+							<li class="yx-ibt"><a href="javascript:;" target="_blank"><i class="iconfont icon-weixin"></i></a></li>
+							<li class="yx-ibt"><a href="javascript:;" target="_blank"><i class="iconfont icon-qq"></i></a></li>
+							<li class="yx-ibt"><a href="javascript:;" target="_blank"><i class="iconfont icon-xinlang"></i></a></li>
+							<li class="yx-ibt"><a href="javascript:;" target="_blank"><i class="iconfont icon-wangyi0"></i></a></li>
+						</ul>
+						<p class="yx-fl-right">
+							<a class="link" href="/pages/register.html" target="_blank">邮箱注册</a>
+							<a class="link" href="javascript:;" target="_blank">忘记密码?</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

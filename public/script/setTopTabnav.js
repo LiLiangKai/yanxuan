@@ -9,6 +9,7 @@ $(function() {
 	let navTabDropdown = $('.yx-tab-dropdown');
 	let tabNavs = $('.yx-tabnavs');
 	let topTabnavs = $('.top-tabnavs');
+	let topSearch = $('.yx-top-search');
 	let searchInputWrap = $('.yx-searchInputWrap');
 
 	let tabNavsTop = tabNavs.offset().top;
@@ -39,6 +40,7 @@ $(function() {
 
 				$('.yx-tabnavs-fixed .yx-searchButton').off('click');
 				searchInputWrap.show();//搜索容器显示
+				topSearch.css('zIndex', 5);
 
 				topTabnavs.removeClass('yx-tabnavs-fixed');
 				mainBody.css('marginTop', 0);
@@ -56,9 +58,12 @@ $(function() {
 				resizeNavTabDropdownLeft($(window).outerWidth());
 
 				searchInputWrap.hide();//隐藏搜索容器
+				topSearch.css('zIndex', 0);
+
 				//为搜索按钮添加点击事件，当点击时，搜索容器显示
 				$('.yx-tabnavs-fixed .yx-searchButton').on('click', function() {
 					searchInputWrap.show();
+					topSearch.css('zIndex', 5);
 				});
 			}
 		}
@@ -90,6 +95,7 @@ $(function() {
 	function hideSearchWrapWithFixed() {
 		let hideBtn = $('.fixed-hide-search-wrap');
 		hideBtn.on('click', function() {
+			topSearch.css('zIndex', 0);
 			searchInputWrap.hide();
 		});
 	}
