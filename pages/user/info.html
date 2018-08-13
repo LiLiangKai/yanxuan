@@ -30,9 +30,19 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -65,18 +75,10 @@
 					</div>
 				</div>
 
-				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<div class="yx-top-userEmpty">
-					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
-							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
-						<ul class="dm-list">
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -916,7 +918,7 @@
 			<div class="yx-crumbs">
 				<a href="/index.html">首页</a>
 				<span class="iconfont icon-next crumb-arrow"></span>
-				<span class="cur-loc">个人中心</span>
+				<span class="cur-loc">账号信息</span>
 			</div>
 
 			<div class="container">
@@ -931,7 +933,7 @@
 									<li><a href="/pages/user/msgcenter.html" class="menu-item side-text">消息通知</a></li>
 									<li><a href="/pages/user/address.html" class="menu-item side-text">地址管理</a></li>
 									<li><a href="/pages/user/collection.html" class="menu-item side-text">我的收藏</a></li>
-									<li><a href="/pages/user/index.html" class="menu-item side-text">我的积分</a></li>
+									<li><a href="/pages/user/foot.html" class="menu-item side-text">我的足迹</a></li>
 								</ul>
 							</div>
 						</div>
@@ -939,7 +941,7 @@
 							<div class="hd side-text">交易管理</div>
 							<div class="bd">
 								<ul>
-									<li><a href="/pages/user/mylist.html" class="menu-item side-text">订单管理</a></li>
+									<li><a href="/pages/order/mylist.html" class="menu-item side-text">订单管理</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">我的红包</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">优惠券</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">礼品卡</a></li>
@@ -960,7 +962,151 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-content yx-ibt"></div>
+				<div class="main-content yx-ibt">
+					<div>
+						<div class="common-tab">
+							<div class="tab-inner theme1">
+								<ul>
+									<li class="item active"><a href="javascript:;">基本资料</a></li>
+									<li class="item"><a href="javascript:;">感兴趣的分类</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- 基本资料 -->
+						<div class="tab-content show">
+							<form class="userinfo-form">
+								<div class="item user-avator">
+									<label class="label">用户头像</label>
+									<div class="content">
+										<div class="w-avator">
+											<img class="avator-img" src="/public/images/icon/default_user.png" alt="">
+											<i class="iconfont icon-xiangji"></i>
+											<div class="mask"></div>
+										</div>
+									</div>
+								</div>
+								<div class="item">					<label class="label">用户ID</label>
+									<div class="content">12345678987</div>
+								</div>
+								<div class="item">					<label class="label">账号</label>
+									<div class="content">12346789@163.com</div>
+								</div>
+								<div class="item">					<label class="label">昵称</label>
+									<div class="content">
+										<input type="text" name="nickname" id="nickname" maxlength="20" value="12346789">
+									</div>
+								</div>
+								<div class="item">					<label class="label">性别</label>
+									<div class="content">
+										<div class="b-radio yx-ibt">
+											<input type="radio" name="sex" value="male" id="male">
+											<label for="male">男</label>
+										</div>
+										<div class="b-radio yx-ibt">
+											<input type="radio" name="sex" value="female" id="female">
+											<label for="female">女</label>
+										</div>
+									</div>
+								</div>
+								<div class="item">					<label class="label">手机号码</label>
+									<div class="content"><a href="javascript:;" class="link">绑定手机号码</a></div>
+								</div>
+								<div class="item">					<label class="label">出生日期</label>
+									<div class="content">
+										<input type="date" name="birthday" id="birthday">
+									</div>
+								</div>
+								<div class="item">					<label class="label">&nbsp;</label>
+									<div class="content">
+										<a href="javascript:;" class="btn btn-primary btn-save">保存</a>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- 感兴趣的分类 -->
+						<div class="tab-content ">
+							<div class="user-interested-cate">
+								<div class="interest-tip">多选几个，小选会推荐地更精准哦！</div>
+								<div class="interest-box">
+									<div class="interest-item">
+										<div class="item-cover">
+											<img src="/public/images/interest/int1.png" alt="床品被枕" class="int-img">
+											<div class="checked-inner">
+												<img src="/public/images/icon/checked.png" alt class="checked-icon">
+											</div>
+										</div>
+										<div class="item-desc">
+											<span class="check-box">
+												<input type="checkbox">
+											</span>
+											<span class="cate-name">床品被枕</span>
+										</div>
+									</div>
+									<div class="interest-item">
+										<div class="item-cover">
+											<img src="/public/images/interest/int1.png" alt="床品被枕" class="int-img">
+											<div class="checked-inner">
+												<img src="/public/images/icon/checked.png" alt class="checked-icon">
+											</div>
+										</div>
+										<div class="item-desc">
+											<span class="check-box">
+												<input type="checkbox">
+											</span>
+											<span class="cate-name">床品被枕</span>
+										</div>
+									</div>
+									<div class="interest-item">
+										<div class="item-cover">
+											<img src="/public/images/interest/int1.png" alt="床品被枕" class="int-img">
+											<div class="checked-inner">
+												<img src="/public/images/icon/checked.png" alt class="checked-icon">
+											</div>
+										</div>
+										<div class="item-desc">
+											<span class="check-box">
+												<input type="checkbox">
+											</span>
+											<span class="cate-name">床品被枕</span>
+										</div>
+									</div>
+									<div class="interest-item">
+										<div class="item-cover">
+											<img src="/public/images/interest/int1.png" alt="床品被枕" class="int-img">
+											<div class="checked-inner">
+												<img src="/public/images/icon/checked.png" alt class="checked-icon">
+											</div>
+										</div>
+										<div class="item-desc">
+											<span class="check-box">
+												<input type="checkbox">
+											</span>
+											<span class="cate-name">床品被枕</span>
+										</div>
+									</div>
+									<div class="interest-item">
+										<div class="item-cover">
+											<img src="/public/images/interest/int1.png" alt="床品被枕" class="int-img">
+											<div class="checked-inner">
+												<img src="/public/images/icon/checked.png" alt class="checked-icon">
+											</div>
+										</div>
+										<div class="item-desc">
+											<span class="check-box">
+												<input type="checkbox">
+											</span>
+											<span class="cate-name">床品被枕</span>
+										</div>
+									</div>
+								</div>
+								<div class="submit-interest">
+									<buttom class="btn btn-primary btn-submit">提 交</buttom>
+									<p class="submit-tip">最少选择一项</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -1053,5 +1199,10 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 	<script src="/public/script/basicFn.js"></script>
+	<script>
+		$(function() {
+			tab($('.common-tab .item'), $('.main-content .tab-content'));
+		});
+	</script>
 </body>
 </html>

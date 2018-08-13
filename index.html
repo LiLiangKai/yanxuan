@@ -30,9 +30,27 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+					<!-- 未登录时显示 -->
+						<li class="yx-ibt"><a href="javascript:;" data-tigger="login">登录</a></li>
+						<li class="yx-ibt"><a href="/pages/register.html" target="_blank">注册</a></li>
+					<!-- end -->
+
+					<!-- 登录时显示 -->
+						<!-- <li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li> -->
+					<!-- end -->
+
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -66,16 +84,20 @@
 				</div>
 
 				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
+				<!-- 用户未登录时 -->
 				<div class="yx-top-userEmpty">
 					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
 					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
+						<ul class="dm-list">
+							<li><a class="link" href="javascript:;"  data-tigger="login">登录</a></li>
 							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
+						</ul>
+					</div>
+				</div>
+				<!-- 用户登录时 -->
+				<!-- <div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">
 						<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
@@ -84,7 +106,7 @@
 							<li><a class="link" href="javascript:;">退出</a></li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 
 				<!-- 搜索 -->
 				<div class="yx-top-search">
@@ -101,18 +123,6 @@
 							<li class="sl-item-tip">
 								<span class="sl-item-txt">大家都在搜</span>
 							</li>
-							<li class="sl-item highlight">
-								<span class="sl-item-txt">服饰季末特惠</span>
-							</li>
-							<li class="sl-item">
-								<span class="sl-item-txt">服饰季末特惠</span>
-							</li>
-							<li class="sl-item">
-								<span class="sl-item-txt">服饰季末特惠</span>
-							</li>
-							<li class="sl-item highlight">
-								<span class="sl-item-txt">服饰季末特惠</span>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -121,7 +131,7 @@
 				<!-- 主导航选项 -->
 				<ul class="yx-tabnavs">
 					<li class="yx-nav-item yx-ibt yx-active">
-						<a href="../index.html" target="_blank">首页</a>
+						<a href="/index.html" target="_blank">首页</a>
 					</li>
 					<li class="yx-nav-item yx-ibt">
 						<a href="/pages/item/list.html" target="_blank">居家</a>
@@ -1030,7 +1040,7 @@
 								<div class="slick-track">
 									<div class="product-item new-product">
 										<div class="item-hd">
-											<a href="javascript:;" title="商品名" target="_blank">
+											<a href="/pages/item/detail.html" title="商品名" target="_blank">
 												<div class="show-img">
 													<img class="img img-noload" src="/public/images/items/newgoods/show_item1.png"  alt="商品名">
 												</div>
@@ -1044,7 +1054,7 @@
 												<span class="tag tag-hot">爆品</span>
 											</div>
 											<div class="item-name">
-												<a href="javascript:;" target="_blank" title="商品名">商品名</a>
+												<a href="/pages/item/detail.html" target="_blank" title="商品名">商品名</a>
 											</div>
 											<div class="item-price">
 												<span class="price">¥1399</span>
@@ -1053,7 +1063,7 @@
 									</div>
 									<div class="product-item new-product">
 										<div class="item-hd">
-											<a href="javascript:;" title="商品名" target="_blank">
+											<a href="/pages/item/detail.html" title="商品名" target="_blank">
 												<div class="show-img">
 													<img class="img img-noload" src="/public/images/items/newgoods/show_item1.png"  alt="商品名">
 												</div>
@@ -1837,14 +1847,14 @@
 					</div>
 					<div class="section-body">
 						<div class="banner">
-							<a href="javascript:;" target="_blank" title="二级-抱枕">
+							<a href="/pages/item/detail.html" target="_blank" title="二级-抱枕">
 								<img class="banner-img" src="/public/images/items/jujia/big_pic1.jpg" alt="">
 							</a>
 						</div>
 						<div class="product-list">
 							<div class="product-item">
 								<div class="item-hd">
-									<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
+									<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
 										<div><img class="img img-noload img-noload img-small" src="/public/images/items/jujia/pic2.png" alt="AB面独立弹簧床垫 进口乳胶"></div>
 									</a>
 								</div>
@@ -1853,7 +1863,7 @@
 										<span class="tag tag-hot">爆品</span>
 									</div>
 									<div class="item-name">
-										<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
+										<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
 									</div>
 									<div class="item-price">
 										<span class="price">¥2599</span>
@@ -1862,7 +1872,7 @@
 							</div>
 							<div class="product-item">
 								<div class="item-hd">
-									<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
+									<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
 										<div><img class="img img-noload img-small" src="/public/images/items/jujia/pic1.png" alt="AB面独立弹簧床垫 进口乳胶"></div>
 										<div class="color-num">泰国制造</div>
 									</a>
@@ -1870,7 +1880,7 @@
 								<div class="item-bd">
 									<div class="item-tags"></div>
 									<div class="item-name">
-										<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
+										<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
 									</div>
 									<div class="item-price">
 										<span class="price">¥2599</span>
@@ -1879,7 +1889,7 @@
 							</div>
 							<div class="product-item">
 								<div class="item-hd">
-									<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
+									<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">
 										<div><img class="img img-noload img-noload img-small" src="/public/images/items/jujia/pic2.png" alt="AB面独立弹簧床垫 进口乳胶"></div>
 										<div class="color-num">八色可选</div>
 									</a>
@@ -1887,7 +1897,7 @@
 								<div class="item-bd">
 									<div class="item-tags"></div>
 									<div class="item-name">
-										<a href="javascript:;" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
+										<a href="/pages/item/detail.html" target="_blank" title="AB面独立弹簧床垫 进口乳胶">AB面独立弹簧床垫 进口乳胶</a>
 									</div>
 									<div class="item-price">
 										<span class="price">¥2599</span>
@@ -3318,6 +3328,12 @@
 					</p>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<!-- 模态框组件 -->
+	<div class="fixed-modal">
+		<div class="modal-wrap">
 		</div>
 	</div>
 

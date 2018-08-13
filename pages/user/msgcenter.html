@@ -30,9 +30,19 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -65,18 +75,10 @@
 					</div>
 				</div>
 
-				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<div class="yx-top-userEmpty">
-					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
-							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
-						<ul class="dm-list">
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -916,7 +918,7 @@
 			<div class="yx-crumbs">
 				<a href="/index.html">首页</a>
 				<span class="iconfont icon-next crumb-arrow"></span>
-				<span class="cur-loc">个人中心</span>
+				<span class="cur-loc">消息通知</span>
 			</div>
 
 			<div class="container">
@@ -931,7 +933,7 @@
 									<li><a href="/pages/user/msgcenter.html" class="menu-item side-text active">消息通知</a></li>
 									<li><a href="/pages/user/address.html" class="menu-item side-text">地址管理</a></li>
 									<li><a href="/pages/user/collection.html" class="menu-item side-text">我的收藏</a></li>
-									<li><a href="/pages/user/index.html" class="menu-item side-text">我的积分</a></li>
+									<li><a href="/pages/user/foot.html" class="menu-item side-text">我的足迹</a></li>
 								</ul>
 							</div>
 						</div>
@@ -939,7 +941,7 @@
 							<div class="hd side-text">交易管理</div>
 							<div class="bd">
 								<ul>
-									<li><a href="/pages/user/mylist.html" class="menu-item side-text">订单管理</a></li>
+									<li><a href="/pages/order/mylist.html" class="menu-item side-text">订单管理</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">我的红包</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">优惠券</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">礼品卡</a></li>

@@ -30,9 +30,19 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -65,18 +75,10 @@
 					</div>
 				</div>
 
-				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<div class="yx-top-userEmpty">
-					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
-							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
-						<ul class="dm-list">
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -931,7 +933,7 @@
 									<li><a href="/pages/user/msgcenter.html" class="menu-item side-text">消息通知</a></li>
 									<li><a href="/pages/user/address.html" class="menu-item side-text">地址管理</a></li>
 									<li><a href="/pages/user/collection.html" class="menu-item side-text">我的收藏</a></li>
-									<li><a href="/pages/user/index.html" class="menu-item side-text">我的积分</a></li>
+									<li><a href="/pages/user/foot.html" class="menu-item side-text">我的足迹</a></li>
 								</ul>
 							</div>
 						</div>
@@ -939,7 +941,7 @@
 							<div class="hd side-text">交易管理</div>
 							<div class="bd">
 								<ul>
-									<li><a href="/pages/user/mylist.html" class="menu-item side-text">订单管理</a></li>
+									<li><a href="/pages/order/mylist.html" class="menu-item side-text">订单管理</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">我的红包</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">优惠券</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">礼品卡</a></li>
@@ -960,7 +962,172 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-content yx-ibt"></div>
+				<div class="main-content yx-ibt">
+					<div>
+						<div class="user-info-wrap">
+							<div class="info yx-ibt">
+								<div class="info-wrap">
+									<a href="/public/pages/user/info.html" class="avatar yx-ibt"><img src="/public/images/icon/default_user.png" alt="" class="avatar-img"></a>
+									<div class="name yx-ibt">
+										<a href="/public/pages/user/info.html" class="nick-name">username</a>
+									</div>
+								</div>
+								<div class="grow-wrap">
+									<div class="grow-num">
+										<span class="yx-fl-left"><a href="javascript:;">成长值 &gt;&gt;</a></span>
+										<span class="yx-fl-right">
+											<span>0</span>
+											<span>/</span>
+											<span>1</span>
+										</span>
+									</div>
+									<div class="grow-process">
+										<div class="pro-num"></div>
+									</div>
+								</div>
+							</div>
+							<div class="asset yx-ibt">
+								<div class="item">
+									<div class="label">我的红包</div>
+									<div class="content"><a href="javascript:;">¥0.00</a></div>
+								</div>
+								<div class="item">
+									<div class="label">优惠券</div>
+									<div class="content"><a href="javascript:;">0张</a></div>
+								</div>
+								<div class="item">
+									<div class="label">可兑返利</div>
+									<div class="content"><a href="javascript:;">¥0.00</a></div>
+								</div>
+								<div class="item">
+									<div class="label">礼品卡</div>
+									<div class="content"><a href="javascript:;">¥0.00</a></div>
+								</div>
+								<div class="item">
+									<div class="label">我的积分</div>
+									<div class="content"><a href="javascript:;">0</a></div>
+								</div>
+								<div class="item">
+									<div class="label">待领礼包</div>
+									<div class="content"><a href="javascript:;">0个</a></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 未完成订单, 为空时显示 -->
+						<div class="undone-orderlist undone-orderlist-empty section-wrap">
+							<div class="orderlist-hd section-wrap-hd">
+								<h3>
+									<span>未完成订单</span>
+									<a href="/pages/order/mylist.html" class="see-all-order">查看全部订单</a>
+								</h3>
+							</div>
+							<!-- 未空时 -->
+							<div class="emptylist-wrap">
+								<div class="empty-status">
+									<div class="icon-empty icon-empty-order"></div>
+									<div class="empty-text">你已经很久没有下单了哦！</div>
+									<a href="/index.html" class="btn btn-ghost">去逛逛</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- 如果有收藏时，显示; 没有收藏时，不显示 -->
+						<div class="collection-item-list section-wrap">
+							<div class="collection-list-hd section-wrap-hd">
+								<h3>
+									<span>我的收藏</span>
+									<a href="/pages/user/collection.html" class="see-all-order">查看全部收藏</a>
+								</h3>
+							</div>
+							<div class="collection-list section-wrap-bd">
+								<div class="product-item collection-item">
+									<div class="delete"><span class="close-topic">×</span></div>
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title="新色 奢华植鞣头层水牛皮席三件套">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic1.png" alt="新色 奢华植鞣头层水牛皮席三件套"></div>
+										</a>
+										<div class="color-num">4色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">满额减</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title="新色 奢华植鞣头层水牛皮席三件套">新色 奢华植鞣头层水牛皮席三件套</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥2499</span>
+										</div>
+									</div>
+								</div>
+								<div class="product-item collection-item">
+									<div class="delete"><span class="close-topic">×</span></div>
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 平滑密编清凉仿藤席">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 平滑密编清凉仿藤席"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">居家特惠</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 平滑密编清凉仿藤席"> 平滑密编清凉仿藤席</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+									</div>
+								</div>
+								<div class="product-item collection-item">
+									<div class="delete"><span class="close-topic">×</span></div>
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+									</div>
+								</div>
+								<div class="product-item collection-item">
+									<div class="delete"><span class="close-topic">×</span></div>
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 

@@ -30,9 +30,26 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+					<!-- 未登录时显示 -->
+						<!-- <li class="yx-ibt"><a href="javascript:;" data-tigger="login">登录</a></li>
+						<li class="yx-ibt"><a href="/pages/register.html" target="_blank">注册</a></li> -->
+					<!-- end -->
+
+					<!-- 登录时显示 -->
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+					<!-- end -->
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -58,19 +75,33 @@
 				<!-- 购物车 -->
 				<div class="yx-top-cart">
 					<div class="yx-cartEnter">
-						<a href="../cart.html" target="_blank">
+						<a href="/pages/cart.html" target="_blank">
 							<i class="icon icon-top icon-cart"></i>
 							<i class="icon icon-top icon-badge cart-num">0</i>
 						</a>
 					</div>
 				</div>
 
-				<div class="yx-top-userEmpty">
-					<a href="../login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
+				<!-- 用户未登录时 -->
+				<!-- <div class="yx-top-userEmpty">
+					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
 					<div class="dropdown-menu">
 						<ul class="dm-list">
-							<li><a href="javascript:;">登录</a></li>
-							<li><a href="javascript:;">注册</a></li>
+							<li><a class="link" href="javascript:;">登录</a></li>
+							<li><a class="link" href="javascript:;">注册</a></li>
+						</ul>
+					</div>
+				</div> -->
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
+							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+							<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+							<li><a class="link" href="javascript:;">退出</a></li>
 						</ul>
 					</div>
 				</div>
@@ -78,8 +109,9 @@
 				<!-- 搜索 -->
 				<div class="yx-top-search">
 					<div class="yx-searchInputWrap">
+						<div class="fixed-hide-search-wrap">&gt;&gt;</div>
 						<input type="text" name="keyword" id="top-search" autocomplete="off">
-						<div class="default-keyword"></div>
+						<div class="default-keyword">服饰季末特惠</div>
 					</div>
 					<div class="yx-searchButton">
 						<a href="javascript:;" target="_blank" class="btn-search"><i class="icon icon-top icon-search"></i></a>

@@ -30,9 +30,26 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+					<!-- 未登录时显示 -->
+						<!-- <li class="yx-ibt"><a href="javascript:;" data-tigger="login">登录</a></li>
+						<li class="yx-ibt"><a href="/pages/register.html" target="_blank">注册</a></li> -->
+					<!-- end -->
+
+					<!-- 登录时显示 -->
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+					<!-- end -->
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -66,17 +83,20 @@
 				</div>
 
 				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<div class="yx-top-userEmpty">
+				<!-- 用户未登录时 -->
+				<!-- <div class="yx-top-userEmpty">
 					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
 					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
+						<ul class="dm-list">
 							<li><a class="link" href="javascript:;">登录</a></li>
 							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
-						<ul class="dm-list">
+						</ul>
+					</div>
+				</div> -->
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -1020,9 +1040,12 @@
 							</div>
 						</div>
 						<div class="btn-group">
-							<a href="javascript:;" class="btn btn-detail-hd btn-buynow">立即购买</a>
-							<a href="javascript:;" class="btn btn-detail-hd btn-addcart"><i class="iconfont icon-cart"></i>加入购物车</a>
-
+							<a href="javascript:;" class="btn btn-detail-hd btn-buynow btn-ghost">立即购买</a>
+							<a href="javascript:;" class="btn btn-detail-hd btn-primary btn-addcart"><i class="iconfont icon-cart"></i>加入购物车</a>
+							<div title="点击收藏" class="collect-block">
+								<div class="top"><i class="iconfont icon-collect"></i></div>
+								<div class="bottom"><p>收藏</p></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1118,8 +1141,81 @@
 
 				<!-- 详情内容 -->
 				<div class="detail-bd">
-					<div id="detail-bd-lt yx-ibt"></div>
-					<div id="detail-bd-rt yx-ibt"></div>
+					<div class="detail-bd-lt yx-ibt">
+						<div class="detail-navbar">
+							<div class="common-tab">
+								<div class="tab-inner theme1">
+									<ul>
+										<li class="item active"><a href="javascript:;">详情</a></li>
+										<li class="item"><a href="javascript:;">评价(<span class="hoverColor">1000</span>)</a></li>
+										<li class="item"><a href="javascript:;">常见问题</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="detail-wrap tab-content show">
+
+						</div>
+						<script src="/public/script/detail.js"></script>
+					</div>
+					<div class="detail-bd-rt yx-ibt">
+						<div class="hot-sell">
+							<div class="hd">24小时热销榜</div>
+							<div class="bd">
+								<div>
+									<div class="product-item item">
+										<div class="item-hd">
+											<a href="/pages/item/detail.html" target="_blank" title="商品名">
+												<div><img class="img img-noload" src="/public/images/items/fushi/p1.png" alt="商品名"></div>
+											</a>
+											<div class="color-num">3色可选</div>
+										</div>
+										<div class="item-bd">
+											<div class="item-name">
+												<a href="/pages/item/detail.html" target="_blank" title="商品名">商品名</a>
+											</div>
+											<div class="item-price">
+												<span class="price">¥65</span>
+											</div>
+										</div>
+									</div>
+									<div class="product-item item">
+										<div class="item-hd">
+											<a href="/pages/item/detail.html" target="_blank" title="商品名">
+												<div><img class="img img-noload" src="/public/images/items/fushi/p1.png" alt="商品名"></div>
+											</a>
+											<div class="color-num">3色可选</div>
+										</div>
+										<div class="item-bd">
+											<div class="item-name">
+												<a href="/pages/item/detail.html" target="_blank" title="商品名">商品名</a>
+											</div>
+											<div class="item-price">
+												<span class="price">¥65</span>
+											</div>
+										</div>
+									</div>
+									<div class="product-item item">
+										<div class="item-hd">
+											<a href="/pages/item/detail.html" target="_blank" title="商品名">
+												<div><img class="img img-noload" src="/public/images/items/fushi/p1.png" alt="商品名"></div>
+											</a>
+											<div class="color-num">3色可选</div>
+										</div>
+										<div class="item-bd">
+											<div class="item-name">
+												<span class="tag tag-hot">爆品</span>
+												<a href="/pages/item/detail.html" target="_blank" title="商品名">商品名</a>
+											</div>
+											<div class="item-price">
+												<span class="price">¥65</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

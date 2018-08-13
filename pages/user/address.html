@@ -30,9 +30,19 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -65,18 +75,10 @@
 					</div>
 				</div>
 
-				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<div class="yx-top-userEmpty">
-					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<!-- 用户为登录时 -->
-						<!-- <ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
-							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul> -->
-
-						<!-- 用户登录时 -->
-						<ul class="dm-list">
+				<!-- 用户登录时 -->
+				<div class="yx-top-userLogin">
+					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -916,7 +918,7 @@
 			<div class="yx-crumbs">
 				<a href="/index.html">首页</a>
 				<span class="iconfont icon-next crumb-arrow"></span>
-				<span class="cur-loc">个人中心</span>
+				<span class="cur-loc">地址管理</span>
 			</div>
 
 			<div class="container">
@@ -931,7 +933,7 @@
 									<li><a href="/pages/user/msgcenter.html" class="menu-item side-text">消息通知</a></li>
 									<li><a href="/pages/user/address.html" class="menu-item side-text active">地址管理</a></li>
 									<li><a href="/pages/user/collection.html" class="menu-item side-text">我的收藏</a></li>
-									<li><a href="/pages/user/index.html" class="menu-item side-text">我的积分</a></li>
+									<li><a href="/pages/user/foot.html" class="menu-item side-text">我的足迹</a></li>
 								</ul>
 							</div>
 						</div>
@@ -939,7 +941,7 @@
 							<div class="hd side-text">交易管理</div>
 							<div class="bd">
 								<ul>
-									<li><a href="/pages/user/mylist.html" class="menu-item side-text">订单管理</a></li>
+									<li><a href="/pages/order/mylist.html" class="menu-item side-text">订单管理</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">我的红包</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">优惠券</a></li>
 									<li><a href="JavaScript:;" class="menu-item side-text">礼品卡</a></li>
@@ -960,7 +962,20 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-content yx-ibt"></div>
+				<div class="main-content yx-ibt">
+					<div class="address-con">
+						<!-- 地址为空时 -->
+						<div class="address-null">
+							<div class="emptylist-wrap">
+								<div class="empty-status">
+									<div class="icon-empty icon-empty-address"></div>
+									<div class="empty-text">您还没有收货地址</div>
+									<a href="javascript:;" class="link add-address">新建地址</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -1046,6 +1061,70 @@
 						<span>出版物经营许可证：新出发滨字第0132号</span>
 						<span>单用途商业预付卡备案证：330100AAC0024</span>
 					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 模态框组件 -->
+	<div class="fixed-modal" style="opacity: 1; display: block;">
+		<div class="modal-wrap">
+			<div class="address-modal">
+				<div class="modal-body">
+					<div class="modal-head"><div class="close">&times;</div></div>
+					<div class="modal-content">
+						<div class="address-container">
+							<div class="addr-title">新建地址</div>
+							<form action="/address.html" class="addrForm" name="addrForm">
+								<div class="addr-row first-row">
+									<span class="label yx-ibt">所在地区</span>
+									<div class="yx-ibt">
+										<div class="error-wrap">
+											<select name="province" id="" class="select">
+												<option selected>请选择省</option>
+											</select>
+										</div>
+										<div class="error-wrap">
+											<select name="city" id="" class="select">
+												<option selected>请选择市</option>
+											</select>
+										</div>
+										<div class="error-wrap">
+											<select name="area" id="" class="select">
+												<option selected>请选择区</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="addr-row">
+									<span class="label yx-ibt">详细地址</span>
+									<div class="error-wrap"><textarea placeholder="详细地址，街道、门牌号等" name="address" cols="30" rows="10" tabindex="6" class="textarea"></textarea></div>
+								</div>
+								<div class="addr-row">
+									<div class="col-2">
+										<span class="label yx-ibt">收 货 人</span>
+										<div class="error-wrap"><input type="text" class="ipt" name="receiver"></div>
+									</div>
+									<div class="col-2">
+										<span class="label yx-ibt">手 机 号</span>
+										<div class="error-wrap"><input type="text" class="ipt" name="mobile"></div>
+									</div>
+								</div>
+							</form>
+							<div class="addr-ft">
+								<div class="col-1 yx-ibt">
+									<div class="check-box">
+										<input type="checkbox" name="defaultAddress" class="checkbox" checked>
+										<span>设为默认</span>
+									</div>
+								</div>
+								<div class="col-3 yx-ibt">
+									<input type="button" value="确 认" class="btn btn-primary btn-comfirm">
+									<input type="button" value="取 消" class="btn btn-ghost btn-cancel">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

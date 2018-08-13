@@ -2,22 +2,38 @@
 	|- 前端开发规范
 	|- 项目组成
 |- pages/                       //页面文件夹
+	|- components/				//组件页面文件夹
+	    |- order/               //订单页相关内容组件文件夹
+	    	|- orderItem.html   //全部订单内容
+	    	|- waitPay.html     //待付款内容
+	    	|- waitSend.html    //待发货内容
+	    	|- sended.html      //已发货内容
+	    	|- waitComment.html //带评论内容
+	    |- modal/               //模态框相关内容组件文件夹
+	    	|- login.html
+	    |- detail/              //商品详情页相关内容组件文件夹
+	    	|- detail.html      //商品详情内容
+ 	    	|- comment.html     //商品评论内容
+	    	|- issue.html       //常见问题内容
 	|- item/                    //商品相关文件夹
 		|- detail.html          //商品详细信息页
 		|- list.html            //商品列表页
 	|- order/                   //订单相关文件夹
 		|- confirm.html         //确认支付页面
 		|- myList.html          //我的订单页面
+		|- orderDetail.html     //订单详情页面
 		|- topay.html           //支付页面
 	|- user/                    //用户相关文件夹
 		|- index.html           //个人中心页
 		|- info.html            //个人信息页
+		|- msgcenter.html       //消息通知页
+		|- address.html         //地址管理页
+		|- foot.html            //我的足迹页
 		|- collecion.html       //我的收藏页
-	|- msgcenter.html           //消息通知页
 	|- cart.html                //购物车页
 	|- login.html               //登录页
 	|- register.html            //注册页
-|- public/                      //公共文件夹
+|- public/                      //公共资源文件夹
 	|- fonts/                   //字体图标文件夹
 	|- images/                  //图片文件夹
 	|- lib/                     //js插件/库夹
