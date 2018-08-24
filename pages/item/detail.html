@@ -1009,10 +1009,10 @@
 								<span class="label">颜色</span>
 								<div class="op-cont">
 									<ul class="tabs">
-										<li class="tab-con ischoice"><a href="javascript:;" title="蓝色"><img src="/public/images/detail/color1.png" alt="蓝色" class="tab-pic"></a></li>
-										<li class="tab-con"><a href="javascript:;" title="白色"><img src="/public/images/detail/color2.png" alt="白色" class="tab-pic"></a></li>
-										<li class="tab-con"><a href="javascript:;" title="黑色"><img src="/public/images/detail/color3.png" alt="黑色" class="tab-pic"></a></li>
-										<li class="tab-con"><a href="javascript:;" title="蓝色"><img src="/public/images/detail/color1.png" alt="蓝色" class="tab-pic"></a></li>
+										<li class="tab-con ischoice" data-label="蓝色"><a href="javascript:;" title="蓝色"><img src="/public/images/detail/color1.png" alt="蓝色" class="tab-pic"></a></li>
+										<li class="tab-con" data-label="白色"><a href="javascript:;" title="白色"><img src="/public/images/detail/color2.png" alt="白色" class="tab-pic"></a></li>
+										<li class="tab-con" data-label="黑色"><a href="javascript:;" title="黑色"><img src="/public/images/detail/color3.png" alt="黑色" class="tab-pic"></a></li>
+										<li class="tab-con" data-label="蓝色"><a href="javascript:;" title="蓝色"><img src="/public/images/detail/color1.png" alt="蓝色" class="tab-pic"></a></li>
 									</ul>
 								</div>
 							</div>
@@ -1020,11 +1020,11 @@
 								<span class="label">尺寸</span>
 								<div class="op-cont">
 									<ul class="tabs">
-										<li class="tab-con ischoice"><a class="tab-txt" href="javascript:;">s</a></li>
-										<li class="tab-con"><a class="tab-txt" href="javascript:;">m</a></li>
-										<li class="tab-con"><a class="tab-txt" href="javascript:;">l</a></li>
-										<li class="tab-con"><a class="tab-txt" href="javascript:;">xl</a></li>
-										<li class="tab-con"><a class="tab-txt" href="javascript:;">xll</a></li>
+										<li class="tab-con ischoice" data-label="s码"><a class="tab-txt" href="javascript:;">s</a></li>
+										<li class="tab-con" data-label="m码"><a class="tab-txt" href="javascript:;">m</a></li>
+										<li class="tab-con" data-label="l码"><a class="tab-txt" href="javascript:;">l</a></li>
+										<li class="tab-con" data-label="xl码"><a class="tab-txt" href="javascript:;">xl</a></li>
+										<li class="tab-con" data-label="xll码"><a class="tab-txt" href="javascript:;">xll</a></li>
 									</ul>
 								</div>
 							</div>
@@ -1301,12 +1301,21 @@
 		</div>
 	</div>
 
+	<!-- 模态框组件 -->
+	<div class="fixed-modal">
+		<div class="modal-wrap">
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+	<script src="/public/script/dialogModal.js"></script>
 	<script src="/public/script/basicFn.js"></script>
 	<script src="/public/script/slickSlide.js"></script>
 	<script>
 		$(function() {
 			slickSlide($('.yx-banner .slick-wrap'));
+
+			loadModal()
 		});
 	</script>
 </body>

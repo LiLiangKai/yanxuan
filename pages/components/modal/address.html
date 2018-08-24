@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="address-modal">
+		<div class="modal-body">
+			<div class="modal-head"><div class="close">&times;</div></div>
+			<div class="modal-content">
+				<div class="address-container">
+					<div class="addr-title">新建地址</div>
+					<form action="/pages/user/address.html" method="get" class="addrForm" name="addrForm">
+						<div class="addr-row first-row">
+							<span class="label yx-ibt">所在地区</span>
+							<div class="yx-ibt">
+								<div class="error-wrap">
+									<select name="province" id="" class="select">
+										<option selected value="">请选择省</option>
+									</select>
+								</div>
+								<div class="error-wrap">
+									<select name="city" id="" class="select">
+										<option selected value="">请选择市</option>
+									</select>
+								</div>
+								<div class="error-wrap">
+									<select name="area" id="" class="select">
+										<option selected value="">请选择区</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="addr-row">
+							<span class="label yx-ibt">详细地址</span>
+							<div class="error-wrap">
+								<textarea placeholder="详细地址，街道、门牌号等" name="address" cols="30" rows="10" tabindex="6" class="textarea"></textarea>
+							</div>
+						</div>
+						<div class="addr-row">
+							<div class="col-2">
+								<span class="label yx-ibt">收 货 人</span>
+								<div class="error-wrap">
+									<input type="text" class="ipt" name="receiver">
+								</div>
+							</div>
+							<div class="col-2" style="margin-left: 15px">
+								<span class="label yx-ibt">手 机 号</span>
+								<div class="error-wrap">
+									<input type="text" class="ipt" name="mobile">
+								</div>
+							</div>
+						</div>
+						<div class="addr-ft">
+							<div class="col-1 yx-ibt">
+								<div class="check-box">
+									<input type="checkbox" name="defaultAddress" class="checkbox" checked>
+									<span>设为默认</span>
+								</div>
+							</div>
+							<div class="col-3 yx-ibt">
+								<input type="button" value="确 认" class="btn btn-primary btn-comfirm">
+								<input type="reset" value="取 消" class="btn btn-ghost btn-cancel">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

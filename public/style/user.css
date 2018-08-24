@@ -1,5 +1,5 @@
 #yx-body .container {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-bottom: 50px;
 }
 
@@ -205,48 +205,6 @@
     height: 528px;
     text-align: center;
     overflow: hidden;
-}
-
-.empty-status {
-    margin: 150px auto 0;
-    text-align: center;
-}
-
-.icon-empty {
-    display: inline-block;
-    width: 180px;
-    height: 180px;
-    background: url("/public/images/icon/empty.png") no-repeat center;
-}
-
-.empty-status .icon-empty-order {
-    background-position: 0 -1900px;
-}
-
-.empty-status .icon-empty-collection {
-    background-position: 0 -760px;
-}
-
-.empty-status .icon-empty-address {
-    background-position: 0 -190px;
-}
-
-.empty-status .icon-empty-foot {
-    background-position: 0 -1330px;
-}
-
-.empty-status .empty-text {
-    font-size: 16px;
-    color: #999;
-}
-
-.empty-status > .btn {
-    display: inline-block;
-    margin-top: 10px;
-    width: 96px;
-    height: 28px;
-    font-size: 14px;
-    line-height: 26px;
 }
 
 
@@ -475,6 +433,73 @@
     font-size: 14px;
 }
 
+.address-con .link { color: #69c; }
+.address-con .link:hover { text-decoration: underline; }
+
+.address-wrap .address-top {
+    line-height: 1;
+    width: 100%;
+    font-size: 14px;
+}
+
+.address-wrap .address-top .title {
+    float: left;
+    padding-left: 10px;
+}
+
+.address-wrap .address-top .link {
+    float: right;
+    padding-right: 3px;
+}
+
+.address-wrap .address-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.address-wrap .address-list {
+    width: 100%;
+    border: 1px solid #e8e8e8;
+}
+
+.address-wrap .address-list th {
+    text-align: center;
+    font-weight: 400;
+    height: 43px;
+    color: #999;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.address-wrap .address-list td {
+    height: 100px;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.address-wrap .address-list th,
+.address-wrap .address-list tr:hover { background: #f5f5f5; }
+
+.address-wrap .address-list .full-addr {
+    text-align: left;
+    max-width: 100px
+}
+
+.address-wrap .address-list .btn {
+    display: inline-block;
+    border-radius: 2px;
+    width: 96px;
+    height: 28px;
+    padding: 0;
+    letter-spacing: normal;
+    line-height: 26px;
+    font-size: 12px;
+    text-align: center;
+    outline: none;
+}
+
 
 /*我的收藏*/
 .collection-con {
@@ -520,144 +545,3 @@
 
 .footprint-content .section-wrap-bd {border: 0;}
 
-
-/*地址 模态框*/
-.address-modal {
-    position: relative;
-    display: block;
-    width: 700px;
-    height: 370px;
-    min-height: 274px;
-    margin: 7% auto;
-    background-color: #fff;
-    padding: 30px 40px 0;
-    text-align: left;
-}
-
-.address-modal .addr-title {
-    width: 100%;
-    line-height: 1.1;
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.address-modal .addrForm {
-    width: 100%;
-    font-size: 14px;
-}
-
-.address-modal .addr-row {
-    margin-top: 20px;
-    line-height: 1;
-    position: relative;
-    clear: both;
-}
-
-.address-modal .addr-row .label {
-    width: 67px;
-    margin-right: 20px;
-    font-size: 14px;
-    text-align: right;
-}
-
-.address-modal .addr-row .label::before {
-    content: "*";
-    color: #D52B33;
-    vertical-align: sub;
-}
-
-.addrForm .error-wrap {
-    display: inline-block;
-    position: relative;
-}
-
-.select {
-    width: 140px;
-    line-height: 28px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    font-size: 14px;
-    outline: none;
-}
-
-.addrForm .select {
-    width: 166px;
-    height: 28px;
-    margin-right: 10px;
-}
-
-.addrForm .select[name="area"] { margin-right: 0; }
-
-.address-modal .addr-row .textarea {
-    height: 70px;
-    background-color: #fff;
-    padding: 9px;
-    width: 525px;
-    color: #333;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 2px;
-    outline: none;
-    resize: none;
-}
-
-.address-modal .addr-row .col-2 {
-    display: inline-block;
-    vertical-align: middle;
-    width: 300px;
-}
-
-.address-modal .first-row .yx-ibt,
-.address-modal .first-row .label,
-.address-modal .addr-row .col-2 .yx-ibt,
-.address-modal .addr-row .col-2 .label {
-    vertical-align: middle;
-}
-
-.ipt {
-    width: 140px;
-    line-height: 28px;
-    border: 1px solid #ddd;
-    font-size: 12px;
-    padding-left: 9px;
-}
-
-.addrForm .ipt {
-    width: 200px;
-    height: 34px;
-    outline: none;
-}
-
-.address-modal .col-1 {
-    width: 85px;
-    margin-left: 87px;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.address-modal .col-3 {
-    width: auto;
-}
-
-.address-modal .addr-ft { margin-top: 30px; }
-
-.address-modal .checkbox {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 1px solid #ddd;
-    vertical-align: middle;
-}
-
-.address-modal .btn {
-    display: inline-block;
-    width: 140px;
-    height: 42px;
-    line-height: 40px;
-    font-size: 16px;
-}
-
-.address-modal .btn.btn-comfirm {
-    margin-left: 150px;
-    margin-right: 10px;
-}

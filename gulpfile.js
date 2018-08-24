@@ -24,7 +24,7 @@ gulp.task("server", function() {
 		files: [
 			"*.html",
 			"pages/*.html",
-			"pages/*/*.html",
+			"pages/**/*.html",
 			"public/style/*.css",
 			"public/script/*.js",
 			"public/server/*.json"

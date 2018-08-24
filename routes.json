@@ -1,3 +1,8 @@
 {
-  "/api/": "/"
+  "/api/": "/",
+  "/api/search_suggest": "/search_suggest",
+  "/api/goodDetail": "/goodDetail",
+  "/api/province": "/province",
+  "/api/city": "/city",
+  "/api/area": "/area",
 }

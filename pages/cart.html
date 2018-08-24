@@ -7,6 +7,7 @@
 	<meta name="description" content="网易严选秉承网易一贯的严谨态度，深入世界各地，严格把关所有商品的产地、工艺、原材料，甄选居家、厨房、饮食等各类商品，力求给你最优质的商品。">
 	<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/public/style/basic.css">
+	<link rel="stylesheet" href="/public/style/cart.css">
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
@@ -28,9 +29,19 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
-						<li class="yx-ibt"><a href="javascript:;">登录</a></li>
-						<li class="yx-ibt"><a href="javascript:;">注册</a></li>
-						<li class="yx-ibt"><a href="javascript:;">我的订单</a></li>
+						<li class="yx-ibt user-drop">
+							<a href="/pages/user/index.html" target="_blank">12345689</a>
+							<div class="user-drop-menu dropdown-menu">
+								<ul class="dm-list">
+									<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
+									<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
+									<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
+									<li><a class="link" href="/pages/user/msgcenter.html" target="_blank">消息中心</a></li>
+									<li><a class="link" href="javascript:;">退出</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
 						<li class="yx-ibt"><a href="javascript:;">企业采购</a></li>
@@ -63,17 +74,6 @@
 					</div>
 				</div>
 
-				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
-				<!-- 用户未登录时 -->
-				<!-- <div class="yx-top-userEmpty">
-					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<ul class="dm-list">
-							<li><a class="link" href="javascript:;">登录</a></li>
-							<li><a class="link" href="javascript:;">注册</a></li>
-						</ul>
-					</div>
-				</div> -->
 				<!-- 用户登录时 -->
 				<div class="yx-top-userLogin">
 					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
@@ -912,7 +912,189 @@
 
 	<!-- 主体 -->
 	<div id="yx-body">
+		<div class="yx-row">
+			<!-- 购物车为空时 -->
+			<!-- <div class="cart-null cart-wrap">
+				<div class="emptylist-wrap">
+					<div class="empty-status">
+						<div class="icon-empty icon-empty-cart"></div>
+						<div class="empty-text">购物车还是空滴</div>
+						<a href="/" class="btn btn-ghost">继续逛</a>
+					</div>
+				</div>
+			</div> -->
 
+			<!-- 购物车不为空时 -->
+			<div class="cart-wrap">
+				<div class="cart-head">
+					<div class="yx-ibt w w1 left">
+						<div class="chkbox">
+							<label><input type="checkbox" class="select-all"> 全选</label>
+						</div>
+					</div>
+					<div class="yx-ibt w w2 left">商品信息</div>
+					<div class="yx-ibt w w3">单价</div>
+					<div class="yx-ibt w w4">数量</div>
+					<div class="yx-ibt w w5">小计</div>
+					<div class="yx-ibt w w6 left">操作</div>
+				</div>
+				<div class="cart-body">
+					<!-- 购物车列表项，data-id属性的值为购物车项的编号 -->
+					<div class="cart-group" data-id="100010">
+						<div class="cart-item">
+							<div class="item w7">
+								<div class="chkbox">
+									<input type="checkbox">
+								</div>
+							</div>
+							<div class="item w8">
+								<div class="pic yx-ibt">
+									<a href="/pages/item/detail.html" target="_blank"><img src="/public/images/cart/c1.png" alt="新色 奢华植鞣头层水牛皮席三件套" class="img"></a>
+								</div>
+								<div class="item-info yx-ibt">
+									<div class="name"><a href="/pages/item/detail.html" target="_blank">新色 奢华植鞣头层水牛皮席三件套</a></div>
+									<div class="spec">
+										<span>奶咖色 150*200cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="item w3">
+								<p class="price">
+									<span>
+										<span>¥</span>
+										<span class="price-num">2699.00</span>
+									</span>
+								</p>
+							</div>
+							<div class="item w4">
+								<div>
+									<div class="op-cont">
+										<div class="sel-num">
+											<button class="sub disabled">-</button>
+											<input type="text" value="1" maxlength="5">
+											<button class="add">+</button>
+										</div>
+									</div>
+								</div>
+								<!-- 如果库存小于100显示 -->
+								<!-- <div class="nervous">
+									<span>剩余</span>
+									<span>5</span>
+									<span>件</span>
+								</div> -->
+							</div>
+							<div class="item w5">
+								<p class="price sprice">
+									<span>¥</span>
+									<span class="sprice-num">2699.00</span>
+								</p>
+							</div>
+							<div class="item w6 left">
+								<div class="operate">
+									<a href="javascript:;" class="add-collection">添加购物车</a>
+								</div>
+								<div class="operate">
+									<a href="javascript:;" class="remove">移除</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end -->
+					<div class="cart-group" data-id="100011">
+						<div class="cart-item">
+							<div class="item w7">
+								<div class="chkbox">
+									<input type="checkbox">
+								</div>
+							</div>
+							<div class="item w8">
+								<div class="pic yx-ibt">
+									<a href="/pages/item/detail.html" target="_blank"><img src="/public/images/cart/c1.png" alt="新色 奢华植鞣头层水牛皮席三件套" class="img"></a>
+								</div>
+								<div class="item-info yx-ibt">
+									<div class="name"><a href="/pages/item/detail.html" target="_blank">新色 奢华植鞣头层水牛皮席三件套</a></div>
+									<div class="spec">
+										<span>奶咖色 150*200cm</span>
+									</div>
+								</div>
+							</div>
+							<div class="item w3">
+								<p class="price">
+									<span>
+										<span>¥</span>
+										<span class="price-num">2699.00</span>
+									</span>
+								</p>
+							</div>
+							<div class="item w4">
+								<div>
+									<div class="op-cont">
+										<div class="sel-num">
+											<button class="sub disabled">-</button>
+											<input type="text" value="1" maxlength="5" max=5>
+											<button class="add">+</button>
+										</div>
+									</div>
+								</div>
+								<!-- 如果库存小于100显示 -->
+								<div class="nervous">
+									<span>剩余</span>
+									<span>5</span>
+									<span>件</span>
+								</div>
+							</div>
+							<div class="item w5">
+								<p class="price sprice">
+									<span>¥</span>
+									<span class="sprice-num">2699.00</span>
+								</p>
+							</div>
+							<div class="item w6 left">
+								<div class="operate">
+									<a href="javascript:;" class="add-collection">添加购物车</a>
+								</div>
+								<div class="operate">
+									<a href="javascript:;" class="remove">移除</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart-foot">
+					<div class="chkbox yx-ibt">
+						<input type="checkbox" class="select-all">
+						<!-- <label class="chk-label">已选(<span class="num">0</span>)</label> -->
+						<label class="chk-label">全选</label>
+						<a href="javascript:;" class="batch-delete">批量删除</a>
+					</div>
+					<div class="yx-ibt info">
+						<div class="yx-ibt info-left">
+							<div class="items-price">
+								<div class="line">
+									<span class="label">商品合计：</span>
+									<span class="amount">
+										<span>¥</span>
+										<span class="price-num">0.00</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="yx-ibt info-right">
+							<div class="should-pay-money">
+								<span class="label">应付金额：</span>
+								<span class="money-info">
+									<span>¥</span>
+									<span class="money">0.00</span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="yx-ibt pay">
+						<a href="javascript:;" class="btn btn-primary btn-pay btn-disabled">下单</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="fixed-right return-top">
 			<div class="return-top-btn">
@@ -1003,5 +1185,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
 	<script src="/public/script/basicFn.js"></script>
+	<script src="/public/script/cart.js"></script>
 </body>
 </html>

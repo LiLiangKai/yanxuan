@@ -1,0 +1,331 @@
+.confirm-container {
+	margin-top: 40px;
+}
+
+.wrap-panel {
+	margin-bottom: 35px;
+	background: #fff;
+	border: 1px solid #e8e8e8;
+}
+
+.wrap-panel .wrap-hd {
+	height: 42px;
+	padding-left: 21px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e8e8e8;
+	line-height: 41px;
+    color: #999;
+    font-size: 14px;
+}
+
+.order-addr {
+	padding: 30px 0 30px 30px;
+	font-size: 14px;
+}
+
+.order-addr .show-addr {
+	    width: 800px;
+}
+
+.wrap-panel .line {
+	line-height: 24px;
+	margin-top: 10px;
+}
+
+.wrap-panel .text-left { text-align: left; }
+
+.wrap-panel .label {
+	color: #999;
+    width: 70px;
+    text-align: center;
+}
+
+.wrap-panel .text {
+    max-width: 720px;
+    word-break: break-all;
+}
+
+.order-addr .line:first-child { margin-top: 0px; }
+
+.order-addr .line:first-child .icon-address {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 30px;
+	color: var(--hoverColor);
+}
+
+.order-addr .line:first-child .text {
+	letter-spacing: 5px;
+    display: inline-block;
+    vertical-align: top;
+    height: 32px;
+    line-height: 34px;
+    padding-left: 10px;
+}
+
+.wrap-panel .link { color: #69c; }
+
+.order-addr .yx-fl-right {
+	width: 253px;
+    height: 58px;
+    border-left: 1px solid #e8e8e8;
+    text-align: center;
+    margin-top: 44px;
+}
+
+.order-addr .yx-fl-right .change-addr {
+	line-height: 1;
+	margin-bottom: 15px;
+	font-size: 12px;
+}
+
+/*付款商品信息*/
+.good-panel .table {
+	font-size: 14px;
+	width: 100%;
+}
+
+.good-panel .table thead {
+	line-height: 42px;
+    height: 42px;
+    color: #999;
+}
+
+.good-panel .table th {
+	font-weight: normal;
+	background-color: #f5f5f5;
+}
+
+.good-panel .table th:first-child { padding-left: 20px; }
+
+.good-panel .table .tbody {
+	padding: 20px 0;
+}
+
+.good-panel .tbody .tr:not(:last-child) {
+	border-bottom: 1px dashed #e8e8e8;
+}
+
+.good-panel .table td {
+	padding: 20px 0;
+    vertical-align: top;
+}
+
+.table td .td-wrap {
+	padding-top: 7px;
+	text-align: center
+}
+
+.good-panel .table .img-wrap,
+.good-panel .table .info-wrap {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.good-panel .table .item-info { padding-left: 20px; }
+
+.good-panel .item-info .td-wrap { text-align: left; }
+
+.good-panel .img-wrap .img {
+	display: inline-block;
+	width: 100px;
+    height: 100px;
+    background-color: #f4f4f4;
+}
+
+.good-panel .info-wrap {
+    height: 100px;
+    padding: 2px 0 0 10px;
+}
+
+.good-panel .info-wrap .name {
+	line-height: 24px;
+    max-width: 210px;
+}
+
+.good-panel .info-wrap .spec {
+	line-height: 22px;
+    font-size: 12px;
+    color: #999;
+}
+
+/*付款信息*/
+.good-panel .pay-into-panel {
+	position: relative;
+	padding: 40px 40px 40px 50px;
+    background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-top: 0;
+}
+
+.good-panel .pay-into-panel .confirm-pay-info {
+	float: right;
+    text-align: right;
+    position: relative;
+}
+
+.confirm-pay-info .line {
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.confirm-pay-info .line .label,
+.confirm-pay-info .line .amount {
+	display: inline-block;
+	vertical-align: top;
+	color: #333;
+}
+
+.confirm-pay-info .line .amount {
+	width: 150px;
+	text-align: right;
+}
+
+.confirm-pay-info .line:last-child {
+	margin-bottom: 20px;
+    padding-top: 24px;
+    border-top: 1px solid #e8e8e8;
+    font-size: 14px;
+    width: 280px;
+    display: inline-block;
+}
+
+.confirm-pay-info .line:last-child .amount {
+	width: 100px;
+    font-weight: 700;
+    color: #d4282d;
+    font-size: 20px;
+}
+
+.confirm-pay-info .pay-btn-line .btn {
+	width: 168px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    position: relative;
+}
+
+.confirm-pay-info .address-tip {
+	text-align: right;
+    line-height: 22px;
+    margin-top: 15px;
+}
+
+.animate {
+	position: absolute;
+	left: 0;
+	top: 0px;
+    /*left:825px*/
+    width: 5px;
+    height: 5px;
+    background: #333;
+    z-index: 1;
+    text-indent: 50;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+/*去付款*/
+.pay-panel {
+    margin-bottom: 90px;
+}
+
+.pay-panel .pay-panel-hd {
+    margin-top: 49px;
+    margin-bottom: 20px;
+}
+
+.pay-panel .pay-panel-hd h2 {
+	font-size: 18px;
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+.txt-muted {
+	color: #999!important;
+}
+
+.txt-red {
+	color: #d4282d!important;
+}
+
+.pay-method-panel {
+    margin-bottom: 40px;
+	background-color: #fff;
+    border: 1px solid #efefef;
+}
+
+.pay-method-panel .hd{
+    height: 42px;
+    padding-left: 21px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #efefef;
+    line-height: 41px;
+    color: #999;
+    font-size: 14px;
+}
+
+.pay-method-panel .bd {
+	padding: 10px 0 19px 36px;
+}
+
+.method-item {
+    margin-left: 10px;
+    width: 190px;
+    height: 90px;
+    line-height: 87px;
+}
+
+.method-item .radio-box {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.method-item .radio-box input[type="radio"] {
+	display: inline-block;
+	vertical-align: middle;
+	height: 15px;
+    width: 15px;
+}
+
+.icon-payMethod {
+	display: inline-block;
+	vertical-align: middle;
+	background: url("/public/images/icon/pay.png");
+}
+
+.payMethod-alipay {
+	background-position: 0 0;
+    height: 47px;
+    width: 133px;
+}
+.payMethod-weixin {
+	background-position: 0 -388px;
+    height: 39px;
+    width: 134px;
+}
+.payMethod-epay {
+	background-position: 0 -158px;
+    height: 45px;
+    width: 133px;
+}
+
+#go-pay {
+	width: 168px;
+    height: 49px;
+    line-height: 47px;
+    font-size: 18px;
+}
+
+/*剩余付款时间*/
+.paytime-down {
+	margin-top: 10px;
+	text-align: right;
+	font-size: 14px;
+}
+
+.paytime-down .remain-time {
+	color: #d4282d;
+}

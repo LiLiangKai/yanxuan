@@ -1,5 +1,13 @@
+/**
+ * @author: llk
+ * @date: 2018/7/30
+ * @function: 商品详情页相关功能
+ */
+
 $(function() {
 	loadDetailTabContent();
+	detailViewTab($('.detail-hd-slide'));
+	addToCart($('.btn-addcart'));
 });
 
 function loadDetailTabContent() {
@@ -104,3 +112,81 @@ function detailImgDescHtml(url) {
 	return html;
 }
 
+/**
+ * 详情页视图切换
+ * 详情页头部小图片列表onmouseover事件
+ * @param  {[type]} detail [description]
+ * @return {[type]}        [description]
+ */
+function detailViewTab(detail) {
+	let largeImg = detail.find('.img-large');
+	let viewList = detail.find('.view-list li');
+
+	viewList.on('mouseover', function() {
+		let index = $(this).index();
+		viewList.removeClass('active').eq(index).addClass('active');
+		let imgSrc =viewList.eq(index).find('.img-small').attr('src');
+		largeImg.attr('src', imgSrc);
+	});
+}
+
+/**
+ * 添加到购物车
+ */
+function addToCart(startObj) {
+	let btnCart = startObj;
+	let isFly = false;
+
+	/*
+
+	 */
+	btnCart.on('click', function(event) {
+		if(!isFly) {
+			isFly = true;
+			let cart = $('.yx-top-cart');
+			let cartNum = cart.find('.cart-num');
+
+			let start = {
+				x: event.pageX,
+				y: event.pageY - $(document).scrollTop()
+			}
+
+			let end = {
+				x: Math.floor(cart.offset().left + cart.width()/2),
+				y: Math.floor(cart.offset().top + cart.height()/2 - $(document).scrollTop())
+			}
+			console.log('start: ', start);
+			console.log('end: ', end);
+
+			let fly = createFly();
+			$('body').append(fly);
+			$('.fly').css({
+				top: start.y + 'px',
+				left: start.x + 'px'
+			}).velocity({
+				left: end.x,
+				top: end.y,
+				opacity: 0.3,
+				scale: 0.3
+			}, {
+				duration: 1700,
+				complete: function(elem) {
+					$(elem).remove();
+					let num = Number.parseInt(cartNum.text());
+					cartNum.velocity({
+						scale: 0.1,
+						opacity: 0
+					}).text(num+1).velocity({
+						scale: 1,
+						opacity: 1
+					});
+					isFly = false;
+				}
+			});
+		}
+	});
+
+	function createFly() {
+		return `<div class="fly"><i class="iconfont icon-fly"></i></div>`;
+	}
+};

@@ -1,3 +1,9 @@
+/**
+ * @author: llk
+ * @date: 2018/8/13
+ * @function: 订单页相关功能
+ */
+
 $(function() {
 	loadOrderTabContent();
 });

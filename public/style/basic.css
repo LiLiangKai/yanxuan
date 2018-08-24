@@ -65,6 +65,8 @@ a:hover {
 
 .yx-fz12 { font-size: 12px; }
 .yx-fz14 { font-size: 14px; }
+.yx-fz16 { font-size: 16px; }
+.yx-fz18 { font-size: 18px; }
 
 .txt-center { text-align: center; }
 
@@ -128,7 +130,7 @@ a:hover {
 
 .img-noload {
 	/*background: #fff url("../images/icon/img_noload.png") no-repeat center center;*/
-	background: #f4f4f4;
+	/*background: #f4f4f4;*/
     color: #f4f4f4;
 }
 
@@ -532,8 +534,8 @@ a:hover {
 }
 
 .yx-tabnavs .yx-nav-item {
-	padding: 0 20px;
-	/*position: relative;*/
+	padding: 0 23px;
+    margin-left: -5px;
 }
 
 .yx-tabnavs .yx-nav-item > a {
@@ -914,10 +916,23 @@ a:hover {
 /*按钮*/
 .btn {
 	border-radius: 2px;
-	padding: 0;
+    width: 96px;
+    height: 28px;
+    padding: 0;
     letter-spacing: normal;
+    line-height: 26px;
+    font-size: 12px;
     text-align: center;
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
     cursor: pointer;
+}
+
+.btn:hover {
+	color: #333;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
 .btn-ghost {
@@ -928,6 +943,7 @@ a:hover {
 }
 
 .btn-ghost:hover {
+	color: var(--hoverColor);
 	background-color: #fff;
 }
 
@@ -1013,6 +1029,52 @@ a:hover {
 }
 
 .tab-content.show { display: block; }
+
+.empty-status {
+    margin: 150px auto 0;
+    text-align: center;
+}
+
+.icon-empty {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    background: url("/public/images/icon/empty.png") no-repeat center;
+}
+
+.empty-status .icon-empty-order {
+    background-position: 0 -1900px;
+}
+
+.empty-status .icon-empty-collection {
+    background-position: 0 -760px;
+}
+
+.empty-status .icon-empty-address {
+    background-position: 0 -190px;
+}
+
+.empty-status .icon-empty-foot {
+    background-position: 0 -1330px;
+}
+
+.empty-status .icon-empty-cart {
+	background-position: 0 -570px;
+}
+
+.empty-status .empty-text {
+    font-size: 16px;
+    color: #999;
+}
+
+.empty-status > .btn {
+    display: inline-block;
+    margin-top: 10px;
+    width: 96px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 26px;
+}
 
 
 /*底部区*/
@@ -1452,3 +1514,176 @@ a:hover {
 	font-size: 12px;
 	color: #999;
 }
+
+/*地址 模态框*/
+.address-modal {
+    position: relative;
+    display: block;
+    width: 700px;
+    min-height: 370px;
+    /*min-height: 274px;*/
+    margin: 7% auto;
+    background-color: #fff;
+    padding: 30px 40px 0;
+    text-align: left;
+}
+
+.address-modal .addr-title {
+    width: 100%;
+    line-height: 1.1;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.address-modal .addrForm {
+    width: 100%;
+    font-size: 14px;
+}
+
+.address-modal .addr-row {
+    margin-top: 25px;
+    line-height: 1;
+    position: relative;
+    clear: both;
+}
+
+.address-modal .addr-row .label {
+    width: 67px;
+    margin-right: 20px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.address-modal .addr-row .label::before {
+    content: "*";
+    color: #D52B33;
+    vertical-align: sub;
+}
+
+.addrForm .error-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.select {
+    width: 140px;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 14px;
+    outline: none;
+}
+
+.addrForm .select {
+    width: 166px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.addrForm .select[name="area"] { margin-right: 0; }
+
+.address-modal .addr-row .textarea {
+    height: 70px;
+    background-color: #fff;
+    padding: 9px;
+    width: 525px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+}
+
+.address-modal .addr-row .col-2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+}
+
+.address-modal .first-row .yx-ibt,
+.address-modal .first-row .label,
+.address-modal .addr-row .col-2 .yx-ibt {
+    vertical-align: middle;
+}
+
+.address-modal .addr-row .col-2 .label { vertical-align: top; }
+
+.ipt {
+    width: 140px;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding-left: 9px;
+}
+
+.addrForm .ipt {
+    width: 200px;
+    height: 34px;
+    outline: none;
+}
+
+.address-modal .col-1 {
+    width: 85px;
+    margin-left: 87px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.address-modal .col-3 {
+    width: auto;
+    margin-top: 20px;
+}
+
+.address-modal .addr-ft { margin-bottom: 30px; margin-top: 15px; }
+
+.address-modal .checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.address-modal .btn {
+    display: inline-block;
+    width: 140px;
+    height: 42px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.address-modal .btn.btn-comfirm {
+    margin-left: 145px;
+    margin-right: 10px;
+}
+
+.address-modal .error-msg {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    color: #d4282d;
+    margin-top: 3px;
+}
+
+.address-modal .error-msg .icon-tip {
+    color: #d4282d;
+}
+.address-modal .error-msg .error-txt {
+    font-size: 12px;
+}
+
+.fly {
+	position: fixed;
+	z-index: 100;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	transform: scale(2);
+}
+.fly .icon-fly {
+	font-size: 20px;
+	color: var(--hoverColor);
+}
+
