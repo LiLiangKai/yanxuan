@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>选择付款方式 - 以严谨的态度，为中国消费者甄选天下优品</title>
+	<title>搜索 - 网易严选</title>
 	<meta name="keywords" content="网易严选,严选,网易优选,网易甄选,网易优品,网易精选,甄选家,严选态度">
 	<meta name="description" content="网易严选秉承网易一贯的严谨态度，深入世界各地，严格把关所有商品的产地、工艺、原材料，甄选居家、厨房、饮食等各类商品，力求给你最优质的商品。">
 	<link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/public/style/basic.css">
 	<link rel="stylesheet" href="/public/fonts/iconfont.css">
-	<link rel="stylesheet" href="/public/style/comfirm.css">
+	<link rel="stylesheet" href="/public/style/itemList.css">
 	<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
@@ -30,6 +30,10 @@
 				</div>
 				<div class="tnav-right">
 					<ul class="yx-tnav-item">
+					<!-- 未登录时显示 -->
+						<!-- <li class="yx-ibt"><a href="javascript:;" data-tigger="login">登录</a></li>
+						<li class="yx-ibt"><a href="/pages/register.html" target="_blank">注册</a></li> -->
+					<!-- end -->
 
 					<!-- 登录时显示 -->
 						<li class="yx-ibt user-drop">
@@ -45,7 +49,6 @@
 							</div>
 						</li>
 					<!-- end -->
-
 						<li class="yx-ibt"><a href="/pages/order/mylist.html" target="_blank">我的订单</a></li>
 						<li class="yx-ibt"><a href="javascript:;">会员</a></li>
 						<li class="yx-ibt"><a href="javascript:;">甄选家</a></li>
@@ -79,11 +82,21 @@
 					</div>
 				</div>
 
+				<!-- 用户为空yx-top-userEmpty，用户不为空yx-top-userLogin -->
+				<!-- 用户未登录时 -->
+				<!-- <div class="yx-top-userEmpty">
+					<a href="/pages/login.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
+					<div class="dropdown-menu">
+						<ul class="dm-list">
+							<li><a class="link" href="javascript:;">登录</a></li>
+							<li><a class="link" href="javascript:;">注册</a></li>
+						</ul>
+					</div>
+				</div> -->
 				<!-- 用户登录时 -->
 				<div class="yx-top-userLogin">
 					<a href="/pages/user/index.html" target="_blank"><i class="icon icon-top icon-user"></i></a>
-					<div class="dropdown-menu">
-						<ul class="dm-list">
+					<div class="dropdown-menu">					<ul class="dm-list">
 							<li><a class="link" href="/pages/user/index.html" target="_blank">个人中心</a></li>
 							<li><a class="link" href="/pages/user/info.html" target="_blank">账户信息</a></li>
 							<li><a class="link" href="/pages/user/collection.html" target="_blank">我的收藏</a></li>
@@ -108,23 +121,35 @@
 							<li class="sl-item-tip">
 								<span class="sl-item-txt">大家都在搜</span>
 							</li>
+							<li class="sl-item highlight">
+								<span class="sl-item-txt">服饰季末特惠</span>
+							</li>
+							<li class="sl-item">
+								<span class="sl-item-txt">服饰季末特惠</span>
+							</li>
+							<li class="sl-item">
+								<span class="sl-item-txt">服饰季末特惠</span>
+							</li>
+							<li class="sl-item highlight">
+								<span class="sl-item-txt">服饰季末特惠</span>
+							</li>
 						</ul>
 					</div>
 				</div>
-				<!-- <script src="/public/script/topNavSearch.js"></script> -->
+				<!-- <script src="../../public/script/topNavSearch.js"></script> -->
 
 				<!-- 主导航选项 -->
 				<ul class="yx-tabnavs">
 					<li class="yx-nav-item yx-ibt">
 						<a href="/index.html" target="_blank">首页</a>
 					</li>
-					<li class="yx-nav-item yx-ibt">
-						<a href="/pages/item/list.html" target="_blank">居家</a>
+					<li class="yx-nav-item yx-ibt yx-active">
+						<a href="list.html" target="_blank">居家</a>
 						<div class="yx-tab-dropdown">
 							<div class="dropdown-panel">
 								<ul class="dropdown-cateCard-list">
 									<li class="dropdown-cateCard-item">
-										<a href="/pages/item/list.html#xialiang" target="_blank">
+										<a href="list.html#xialiang">
 											<img src="/public/images/nav_icon/jujia/xialiang.png" alt="">
 											<p>夏凉</p>
 										</a>
@@ -899,64 +924,223 @@
 						<a href="javascript:;" target="_blank">众筹</a>
 					</li>
 				</ul>
-				<script src="/public/script/setTopTabnav.js"></script>
+				<script src="../../public/script/setTopTabnav.js"></script>
 			</div>
 		</div>
 	</div>
 
 	<!-- 主体 -->
 	<div id="yx-body">
-		<div class="yx-row">
-			<div class="pay-panel">
-				<div class="pay-panel-hd">
-					<h2>选择付款方式</h2>
-					<div class="yx-clearfix">
-						<p class="yx-fl-left txt-muted trade-no yx-fz16">
-							交易号: <span>20180824153905YXMPDD1609641620</span>
-						</p>
-						<p class="yx-fl-right yx-fz18">
-							实付：<span class="txt-red">¥168.40</span>
-						</p>
-					</div>
+		<div class="bd-bg">
+			<div class="yx-row">
+				<!-- 路径导航 -->
+				<div class="yx-crumbs">
+					<a href="/index.html">首页</a>
+					<span class="iconfont icon-next crumb-arrow"></span>
+					<span class="cur-loc">搜索的内容</span>
 				</div>
-				<form action="/pages/order/topay.html" method="get" class="payForm" id="payForm">
-					<div class="pay-method-panel">
-						<div class="hd">支付方式</div>
-						<div class="bd">
-							<div class="method-list">
-								<div class="method-item yx-ibt">
-									<div class="radio-box"><input type="radio" name="methods" value="0"></div>
-									<i class="icon-payMethod payMethod-alipay"></i>
+
+				<!-- 导航商品类型 -->
+				<div class="good-area">
+					<div class="good-sort-bar">
+						<div class="sorts">
+							<div class="name yx-ibt">排序：</div>
+							<div class="category-group yx-ibt">
+								<a href="javascript:;" class="category-item active">默认</a>
+								<a href="javascript:;" class="category-item ">价格</a>
+								<a href="javascript:;" class="category-item ">上架时间</a>
+							</div>
+						</div>
+					</div>
+					<div class="good-container">
+						<div class="good-category" data-type="xialiang">
+							<div class="good-list">
+								<!-- 商品列表 -->
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title="新色 奢华植鞣头层水牛皮席三件套">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic1.png" alt="新色 奢华植鞣头层水牛皮席三件套"></div>
+										</a>
+										<div class="color-num">4色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">满额减</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title="新色 奢华植鞣头层水牛皮席三件套">新色 奢华植鞣头层水牛皮席三件套</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥2499</span>
+										</div>
+										<div class="item-desc">三峡水牛头层皮，高端夏凉必备
+										</div>
+									</div>
 								</div>
-								<div class="method-item yx-ibt">
-									<div class="radio-box"><input type="radio" name="methods" value="0"></div>
-									<i class="icon-payMethod payMethod-weixin"></i>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 平滑密编清凉仿藤席">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 平滑密编清凉仿藤席"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">限时购</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 平滑密编清凉仿藤席"> 平滑密编清凉仿藤席</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">凉而不冰，老幼体寒者夏日必备
+										</div>
+									</div>
 								</div>
-								<div class="method-item yx-ibt">
-									<div class="radio-box"><input type="radio" name="methods" value="0"></div>
-									<i class="icon-payMethod payMethod-epay"></i>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic3.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
+								</div>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic1.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
+								</div>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
+								</div>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="/pages/item/detail.html" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic3.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="/pages/item/detail.html" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
+								</div>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="javascript:;" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic1.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="javascript:;" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
+								</div>
+								<div class="product-item good-item">
+									<div class="item-hd">
+										<a href="javascript:;" target="_blank" title=" 商品名">
+											<div style="width: 100%; height: 100%"><img class="img img-noload img-small" src="/public/images/items/jujia/xialiang_pic2.png" alt=" 商品名"></div>
+										</a>
+										<div class="color-num">2色可选</div>
+									</div>
+									<div class="item-bd">
+										<div class="item-tags">
+											<span class="tag tag-other">标签</span>
+										</div>
+										<div class="item-name">
+											<a href="javascript:;" target="_blank" title=" 商品名"> 商品名</a>
+										</div>
+										<div class="item-price">
+											<span class="price">¥194.4</span>
+											<span class="old-price">¥299</span>
+										</div>
+										<div class="item-desc">商品描述
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="to-pay yx-clearfix">
-						<!-- 表单提交的字段，tradNo为交易号，payMethod为付款方式 -->
-						<input type="hidden" name="tradeNo" value="20180824153905YXMPDD1609641620">
-						<input type="hidden" name="payMethod" value>
-						<input type="button" value="立即付款" class="btn btn-primary yx-fl-right" id="go-pay">
-					</div>
-				</form>
-				<!-- 剩余时间 -->
-				<div class="paytime-down">
-					<span class="label">剩余付款时间：</span>
-					<span class="remain-time" data-time="3376657">18分31秒</span>
 				</div>
-			</div>
-		</div>
 
-		<div class="fixed-right return-top">
-			<div class="return-top-btn">
-				<a href="javascript:;">TOP</a>
+				<div class="fixed-right return-top">
+					<div class="return-top-btn">
+						<a href="javascript:;">TOP</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1031,7 +1215,7 @@
 						<li class="yx-ibt"><a href="javascript:;">友情链接</a></li>
 					</ul>
 					<p class="yx-copyright">
-						<span>至尊五人组版权所有 © 2018-2018 </span>
+						<span>网易公司版权所有 © 1997-2018 </span>
 						<span>食品经营许可证：JY13301080111719</span>
 						<span>出版物经营许可证：新出发滨字第0132号</span>
 						<span>单用途商业预付卡备案证：330100AAC0024</span>
@@ -1041,18 +1225,14 @@
 		</div>
 	</div>
 
-	<!-- 模态框组件 -->
-	<div class="fixed-modal">
-		<div class="modal-wrap">
-		</div>
-	</div>
-
 	<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-	<script src="/public/script/dialogModal.js"></script>
 	<script src="/public/script/basicFn.js"></script>
+	<script src="/public/script/slickSlide.js"></script>
 	<script>
 		$(function() {
-			animatePoint($('.pay-into-panel'))
+			slickSlide($('.yx-banner .slick-wrap'));
+			tab($('.categories .category-item'));
+			tab($('.sorts .category-item'));
 		});
 	</script>
 </body>

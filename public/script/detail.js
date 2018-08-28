@@ -46,18 +46,19 @@ function loadDetailTabContent() {
 
 	function loadDetail() {
 		detailWrap.load(loadUrl[0], function() {
-			// let attrList = $('.attr-list');
-			// let listImgDesc= $('.list-img-des');
-			// $.getJSON('/api/goodDetail', function(data) {
-			// 	attrList.append(createAttrList(data.goodAttrs));
-			// 	listImgDesc.append(creatDetailImgDesc(data.goodImgUrls));
-			// });
+			let attrList = $('.attr-list');
+			let listImgDesc= $('.list-img-des');
+			$.getJSON('/api/goodDetail', function(data) {
+				attrList.append(createAttrList(data.goodAttrs));
+				listImgDesc.append(creatDetailImgDesc(data.goodImgUrls));
+			});
 		});
 	}
 
 	function loadDetailComment() {
 		detailWrap.load(loadUrl[1], function() {
-			// console.log('success');
+			console.log('success');
+			tab($('.commnet-nav .label'));
 		});
 	}
 
@@ -138,7 +139,7 @@ function addToCart(startObj) {
 	let isFly = false;
 
 	/*
-
+		点击加入购物车时，生成一架小飞机飞行购物车
 	 */
 	btnCart.on('click', function(event) {
 		if(!isFly) {
@@ -146,20 +147,19 @@ function addToCart(startObj) {
 			let cart = $('.yx-top-cart');
 			let cartNum = cart.find('.cart-num');
 
-			let start = {
+			let start = {//计算起始点，即鼠标点击点
 				x: event.pageX,
 				y: event.pageY - $(document).scrollTop()
 			}
 
-			let end = {
+			let end = {//计算结束点，即购物车的位置
 				x: Math.floor(cart.offset().left + cart.width()/2),
 				y: Math.floor(cart.offset().top + cart.height()/2 - $(document).scrollTop())
 			}
-			console.log('start: ', start);
-			console.log('end: ', end);
 
 			let fly = createFly();
 			$('body').append(fly);
+
 			$('.fly').css({
 				top: start.y + 'px',
 				left: start.x + 'px'
@@ -171,6 +171,7 @@ function addToCart(startObj) {
 			}, {
 				duration: 1700,
 				complete: function(elem) {
+					//动画完成，移除小飞机，购物车数量加1
 					$(elem).remove();
 					let num = Number.parseInt(cartNum.text());
 					cartNum.velocity({
@@ -186,7 +187,7 @@ function addToCart(startObj) {
 		}
 	});
 
-	function createFly() {
+	function createFly() { //小飞机的HTML代码
 		return `<div class="fly"><i class="iconfont icon-fly"></i></div>`;
 	}
 };

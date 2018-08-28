@@ -135,6 +135,11 @@
     height: 100px;
 }
 
+.order-item .package-item .express .cell {
+    color: #999;
+    margin-bottom: 5px;
+}
+
 .order-item .package-item .status {
 	display: table-cell;
 	vertical-align: middle;
@@ -308,4 +313,15 @@
 .package-item .info-wrap .name {
 	max-width: 210px;
 	line-height: 24px;
+}
+
+.txt-red { color: #d54553; }
+.txt-primary { color: var(--hoverColor); }
+
+.btn-waitPay,
+.btn-comfirm,
+.btn-toCommentt {
+    width: 80px;
+    display: block;
+    margin: 0 auto 10px;
 }

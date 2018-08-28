@@ -1,4 +1,6 @@
 /*商品展示列表页面轮播图样式*/
+.yx-banner { margin-bottom: 30px; }
+
 .slick-wrap {
 	height: 310px;
 }
@@ -29,7 +31,6 @@
 
 /*商品展示区域*/
 .good-area {
-	margin-top: 30px;
 	padding: 0 40px;
     position: relative;
     background-color: #fff;
@@ -51,6 +52,8 @@
     line-height: 1;
     border-top: 1px dashed #dedede;
 }
+
+.good-sort-bar > div:first-child { border-top: 0; }
 
 .good-sort-bar .categories { border-top: 0; }
 
@@ -390,11 +393,13 @@
 	height: 100%;
 	background: #f4f4f4;
 }
-.detail-hd-info .tab-con.ischoice {
+.detail-hd-info .tab-con.ischoice,
+.detail-hd-info .tab-con.active {
 	border: 2px solid #b4a078;
 }
 
-.detail-hd-info .tab-con.ischoice::before {
+.detail-hd-info .tab-con.ischoice::before,
+.detail-hd-info .tab-con.active::before {
 	content: '';
 	position: absolute;
 	bottom: -10px;
@@ -407,7 +412,8 @@
     transform: rotate(-45deg);
 }
 
-.detail-hd-info .tab-con.ischoice::after {
+.detail-hd-info .tab-con.ischoice::after,
+.detail-hd-info .tab-con.active::after {
 	content: '√';
 	font-size: 12px;
     color: #fff;
@@ -421,15 +427,18 @@
     line-height: 15px;
 }
 
-.detail-hd-info .op-size .tab-con {
+.detail-hd-info .op-size .tab-con,
+.detail-hd-info .op-spec .tab-con {
 	width: auto !important;
 	height:28px;
 	padding: 0;
-	line-height: 28px;
+	line-height: 26px;
 	text-align: center;
+    margin-bottom: 10px;
 }
 
-.detail-hd-info .op-size .tab-txt {
+.detail-hd-info .op-size .tab-txt,
+.detail-hd-info .op-spec .tab-txt {
 	display: inline-block;
 	padding: 0 22px;
 	width: 100%;
@@ -460,6 +469,8 @@
     background: #fff;
     text-align: center;
     cursor: pointer;
+    border: 0;
+    outline: none;
 }
 
 .detail-hd-info .op-num .add { border-left: 1px solid #ddd; }
@@ -523,20 +534,21 @@
     cursor: pointer;
 }
 
-.detail-hd-info .btn-group .collect-block .top {
+.detail-hd-info .collect-block .top {
 	position: relative;
     overflow: hidden;
     height: 24px;
 }
 
-.detail-hd-info .btn-group .collect-block .icon-collect {
+.detail-hd-info .collect-block .collect {
 	display: inline-block;
 	margin-top: 6px;
 	height: 15px;
     width: 16px;
+    color: var(--hoverColor);
 }
 
-.detail-hd-info .btn-group .collect-block .bottom {
+.detail-hd-info .collect-block .bottom {
 	height: 23px;
     font-size: 13px;
     line-height: 23px;

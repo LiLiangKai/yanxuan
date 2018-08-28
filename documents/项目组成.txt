@@ -18,6 +18,7 @@
 	|- item/                    //商品相关文件夹
 		|- detail.html          //商品详细信息页
 		|- list.html            //商品列表页
+		|- search.html          //搜索内容页
 	|- order/                   //订单相关文件夹
 		|- confirm.html         //确认支付页面
 		|- myList.html          //我的订单页面

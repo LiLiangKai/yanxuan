@@ -63,14 +63,14 @@ function search(searchObj, ajaxUrl, objs = {}) {
 		!$(this).val() && defaultKeyword.show();
 	});
 
-	inputSearch.on('keyup', function(event) {
+	inputSearch.on('input', function(event) {
 		event.stopPropagation();
-
-		inputKeyupEventHandle($(this).val());
+		let sl = suggestWrap.find('.sl-item');
+		inputEventHandle($(this).val(), sl);
 	});
 
 	$(document).on('click', function(event) {
-		event.preventDefault();
+		// event.preventDefault();
 		event.stopPropagation();
 
 		suggestWrap.hide();
@@ -81,6 +81,7 @@ function search(searchObj, ajaxUrl, objs = {}) {
 	this.inputFocusEventHandle = function() {
 		defaultKeyword.hide();
 		suggestWrap.show();
+		suggestWrap.find('.sl-item').show();
 	};
 
 	//显示推荐关键词，隐藏推荐关键词面板
@@ -92,10 +93,17 @@ function search(searchObj, ajaxUrl, objs = {}) {
 
 
 	//搜索框键盘keypress事件
-	this.inputKeyupEventHandle = function(value) {
+	this.inputEventHandle = function(value, sl) {
+		sl.css('display', 'block');
 		suggestWrap.show();
-		let flag = keywordList.some(val => val.startsWith(value));
-		!flag && suggestWrap.hide();
+		keywordList.map((val, index) => {
+			if(val.startsWith(value)){
+				sl.eq(index).show();
+				// return index;
+			} else {
+				sl.eq(index).hide();
+			}
+		});
 	};
 
 	//通过ajax加载默认推荐关键词
@@ -125,7 +133,7 @@ function search(searchObj, ajaxUrl, objs = {}) {
 			suggestList.append(items);
 
 			addClickEventWithSuggestKeyword();
-			console.log(keywordList);
+			// console.log(keywordList);
 		});
 	};
 

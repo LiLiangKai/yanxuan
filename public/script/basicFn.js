@@ -21,7 +21,8 @@ function returnTop(returnBtn) {
 	let interval = null;
 	let returnFlag = false;
 
-	returnBtn.on('click', function() {
+	returnBtn.on('click', function(e) {
+		e.stopPropagation();
 		if(!returnFlag) {
 			returnFlag = true;
 			interval = setInterval(function() {
@@ -58,14 +59,37 @@ function showReturnTop(returnBtn) {
 	});
 }
 
+/**
+ * 选项卡
+ * @param  {[type]} btn     [选项卡按钮，必需]
+ * @param  {[type]} content [选项卡面板，可选]
+ * @return {[type]}         [description]
+ */
 function tab(btn, content) {
-	btn.on('click', function() {
+	content = content || '';
+	btn.on('click', function(e) {
+		e.stopPropagation();
+
 		let index = $(this).index();
 		btn.removeClass('active').eq(index).addClass('active');
-		content.removeClass('show').eq(index).addClass('show');
+		//如果没有选项卡面板，则仅为激活选项卡按钮
+		!!content && content.removeClass('show').eq(index).addClass('show');
 	});
 }
 
+//收藏
+function addCollected(btn) {
+	btn.on('click', function(e) {
+		e.stopPropagation();
 
+		let icon = btn.find('.collect');
+		let isCollected = icon.hasClass('icon-collected');
 
+		if(!isCollected) {
+			icon.removeClass('icon-collect').addClass('icon-collected');
+		} else {
+			icon.removeClass('icon-collected').addClass('icon-collect');
+		}
+	});
 
+}
