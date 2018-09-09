@@ -90,6 +90,14 @@
 	padding-top: 30px;
 }
 
+.good-category .search-null {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    letter-spacing: 4px;
+    padding-bottom: 60px;
+}
+
 .good-category > .hd {
 	text-align: center;
     line-height: 1;
@@ -189,7 +197,7 @@
 	margin-right: 9px;
 }
 
-.detail-hd-slide .img-larget {
+.detail-hd-slide .img-large {
 	width: 430px;
 	height: 430px;
 }
@@ -987,4 +995,16 @@
 .comment-issue .issue .answer {
     line-height: 22px;
     color: #999;
+}
+
+.fixed-detail-navbar {
+    position: fixed;
+    top: -50px;
+    z-index: 100;
+    width: 1090px;
+    /*transform: translateY(50px);*/
+}
+
+.fixed-detail-navbar ~ .detail-wrap {
+    margin-top: 15px;
 }

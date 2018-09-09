@@ -156,13 +156,21 @@ function loadProvinceCityDistrict(obj={}) {
 
 	let {province, city, area} = $.extend({}, default_obj, obj);
 
-	loadDate().then(datas => {
+	/*loadDate().then(datas => {
 		let {provinces, cities, areas} = datas;
 		let provinceOptions = optionHTML(provinces);
 
 		province.append(provinceOptions);
 		provinceChangeHandler(cities, areas);
-	});
+	});*/
+	let provinces = window.datas.province,
+		cities = window.datas.city,
+		areas = window.datas.area;
+	let provinceOptions = optionHTML(provinces);
+
+	province.append(provinceOptions);
+	provinceChangeHandler(cities, areas);
+
 
 	/**
 	 * 省会下拉列表框change事件触发函数
@@ -237,7 +245,7 @@ function loadProvinceCityDistrict(obj={}) {
 * 异步加载省市区数据
 * @return {[type]} [description]
 */
-async function loadDate() {
+/*async function loadDate() {
 	let provinces = await new Promise((resolve) => {
 		$.getJSON('/api/province', function(data) {
 			resolve(data);
@@ -258,5 +266,5 @@ async function loadDate() {
 		cities,
 		areas
 	}
-}
+}*/
 

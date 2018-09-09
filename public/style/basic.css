@@ -373,7 +373,8 @@ a:hover {
     outline: 0;
     /*opacity: 0;*/
     width: 252px;
-    max-height: 150px;
+    max-height: 200px;
+    overflow: hidden;
 }
 
 .yx-top-search .yx-suggest .sl-item-tip {
@@ -465,6 +466,175 @@ a:hover {
     height: 19px;
     width: 19px;
 }
+
+.cart-show-panel {
+	position: absolute;
+    right: -19px;
+    top: 30px;
+    z-index: 1;
+    padding-top: 10px;
+    padding-right: 10px;
+    display: none;
+}
+
+.yx-top-cart:hover .cart-show-panel {
+	display: block;
+}
+
+.cart-show-panel .cart-wrap {
+	position: relative;
+    width: 330px;
+    height: 328px;
+    border: 1px solid #b5a176;
+    border-top: 2px solid #d7ccb6;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+    -moz-box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+}
+
+.cart-show-panel .cart-wrap::before,
+.cart-show-panel .cart-wrap::after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+    right: 22px;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+}
+
+.cart-show-panel .cart-wrap::before {
+	top: -17px;
+    border-bottom-color: #d7ccb6;
+}
+.cart-show-panel .cart-wrap::after {
+	top: -14px;
+    border-bottom-color: #fff;
+}
+
+.cart-show-panel .cart-info {
+	margin: 14px 0 0;
+    height: 245px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.cart-show-panel .cart-info .cart-info-inner {
+	background: #e8e8e8;
+}
+
+.cart-show-panel .cart-info .cart-item {
+	height: 70px;
+    padding: 0 0 10px 15px;
+    background-color: #fff;
+}
+
+.cart-show-panel .cart-info .item-left,
+.cart-show-panel .cart-info .item-middle,
+.cart-show-panel .cart-info .item-right { float: left; }
+
+.cart-show-panel .cart-info .item-left {
+	background-color: #f4f4f4;
+    position: relative;
+    text-align: center;
+}
+
+.cart-show-panel .cart-info .item-left .img {
+	width: 60px;
+	height: 60px;
+}
+
+.cart-show-panel .cart-info .item-middle {
+	width: 130px;
+    margin-left: 10px;
+}
+
+.cart-show-panel .cart-info .item-middle p:first-child {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 12px 0 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-show-panel .item-middle .spec-value {
+	max-width: 84px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-show-panel .item-middle .count {
+	margin-left: 14px;
+    margin-top: 1px;
+}
+
+.cart-show-panel .item-middle .count,
+.cart-show-panel .item-middle .spec-value {
+	color: #999;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+.cart-show-panel .item-right .item-price {
+	display: inline-block;
+	vertical-align: middle;
+	width: 60px;
+    text-align: right;
+    font-size: 11px;
+    color: #b62628;
+    margin-top: 14px;
+    line-height: 11px;
+}
+
+.cart-show-panel .item-right .delete-item {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 14px 0 0 10px;
+    line-height: 10px;
+    color: #999;
+    cursor: pointer;
+}
+
+.cart-show-panel .item-right .delete-item:hover { color: var(--hoverColor); }
+
+.cart-show-panel .item-right .icon-del {
+	font-style: normal;
+	font-size: 20px;
+}
+
+.cart-show-panel .cart-bottom {
+    height: 66px;
+    background-color: #f4f0ea;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.cart-show-panel .cart-bottom .cart-totalPrice {
+	font-size: 14px;
+    line-height: 20px;
+    padding: 12px 0 0 15px;
+    color: #BE4141;
+    float: left;
+}
+
+.cart-show-panel .cart-bottom .cart-gotoCart {
+	float: right;
+    margin-right: 31px;
+}
+
+.cart-show-panel .cart-gotoCart .btn {
+	display: inline-block;
+	width: 110px;
+    height: 36px;
+    line-height: 36px;
+    margin-top: 15px;
+}
+
 
 /*用户未登录*/
 .yx-top-userEmpty,
@@ -581,7 +751,7 @@ a:hover {
 	vertical-align: top;
 	width: 45px;
 	margin-bottom: 30px;
-	margin-right: 95px;
+	margin-right: 84px;
 }
 
 .dropdown-cateCard-item:nth-child(7) { margin-right: 0; }
@@ -1687,3 +1857,6 @@ a:hover {
 	color: var(--hoverColor);
 }
 
+.yx-tabnavs-fixed {
+	/*transform: translateY(-60px);*/
+}

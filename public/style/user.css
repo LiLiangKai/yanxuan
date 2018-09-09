@@ -545,3 +545,26 @@
 
 .footprint-content .section-wrap-bd {border: 0;}
 
+.footprint-content .section-wrap-bd .p-list { margin-bottom: 20px; }
+
+.footprint-content .list-hd {
+    margin-bottom: 23px;
+    line-height: 28px;
+    color: var(--hoverColor);
+}
+
+.footprint-content .list-hd .day {
+    font-size: 28px;
+    padding-right: 6px;
+    background-color: #fff;
+    vertical-align: bottom;
+    margin-left: 6px;
+}
+
+.footprint-content .list-hd .line {
+    position: absolute;
+    z-index: -1;
+    width: 828px;
+    margin-top: -7px;
+    border-bottom: 1px solid #ddd;
+}

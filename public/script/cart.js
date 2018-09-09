@@ -56,7 +56,6 @@ class Cart {
 
 function cartHandler() {
 	let selectAllChks = $('.select-all'); //全选复选框
-	let chkboxs = $('.chkbox input[type="checkbox"]:not(.select-all)');
 	let cartGroups = $('.cart-group');
 	let totalPayMoney = $('.items-price .price-num');   //商品合计
 	let shouldPayMoney = $('.should-pay-money .money'); //应付金额
@@ -74,6 +73,7 @@ function cartHandler() {
 
 	//复选框事件
 	function selectHandler() {
+		let chkboxs = $('.chkbox input[type="checkbox"]:not(.select-all)');
 		//全选复选框
 		selectAllChks.on('click', function(e) {
 			if(this.checked){
@@ -103,6 +103,7 @@ function cartHandler() {
 
 	//获取选择的购物车商品项
 	function getCheckedCartItem() {
+		let chkboxs = $('.chkbox input[type="checkbox"]:not(.select-all)');
 		let totalPay = 0;
 		let shouldPay = 0;
 		let chkNum = 0; //选中数量
@@ -244,7 +245,9 @@ function cartHandler() {
 
 	//移除购物车商品项
 	function deleteHandler() {
+		let chkboxs = $('.chkbox input[type="checkbox"]:not(.select-all)');
 		let removeAll = $('.batch-delete');
+		let price = cartGroups.find('.sprice-num');
 
 		for(let i=0; i<cartGroups.length; i++) {
 			let removeBtn = cartGroups.eq(i).find('.remove');
@@ -257,6 +260,8 @@ function cartHandler() {
 				cartGroups.eq(i).velocity('slideUp', {
 					complete(elem) {
 						$(elem).remove();
+						cartList.splice(i, 1)
+						getCheckedCartItem();
 					}
 				});
 			});
@@ -272,9 +277,11 @@ function cartHandler() {
 					cartIds.push(cartList[i].getCartId);
 
 					//移除
-					cartGroups.eq(i).velocity('slideUp', {
+					cartGroups.velocity('slideUp', {
 						complete(elem) {
 							$(elem).remove();
+							cartList = [];
+							getCheckedCartItem();
 						}
 					});
 				}

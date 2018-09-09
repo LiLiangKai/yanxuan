@@ -929,11 +929,11 @@
 									<i class="icon-payMethod payMethod-alipay"></i>
 								</div>
 								<div class="method-item yx-ibt">
-									<div class="radio-box"><input type="radio" name="methods" value="0"></div>
+									<div class="radio-box"><input type="radio" name="methods" value="1"></div>
 									<i class="icon-payMethod payMethod-weixin"></i>
 								</div>
 								<div class="method-item yx-ibt">
-									<div class="radio-box"><input type="radio" name="methods" value="0"></div>
+									<div class="radio-box"><input type="radio" name="methods" value="2"></div>
 									<i class="icon-payMethod payMethod-epay"></i>
 								</div>
 							</div>
@@ -943,13 +943,13 @@
 						<!-- 表单提交的字段，tradNo为交易号，payMethod为付款方式 -->
 						<input type="hidden" name="tradeNo" value="20180824153905YXMPDD1609641620">
 						<input type="hidden" name="payMethod" value>
-						<input type="button" value="立即付款" class="btn btn-primary yx-fl-right" id="go-pay">
+						<input type="button" value="立即付款" class="btn btn-primary yx-fl-right btn-disabled" id="go-pay">
 					</div>
 				</form>
 				<!-- 剩余时间 -->
 				<div class="paytime-down">
 					<span class="label">剩余付款时间：</span>
-					<span class="remain-time" data-time="3376657">18分31秒</span>
+					<span class="remain-time"></span>
 				</div>
 			</div>
 		</div>
@@ -1044,15 +1044,26 @@
 	<!-- 模态框组件 -->
 	<div class="fixed-modal">
 		<div class="modal-wrap">
+			<div class="yx-login-wrap">
+				<div class="login-box">
+					<div class="wrap-header">
+						<div class="close">&times;</div>
+					</div>
+					<div id="payTip">
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+	<script src="/public/script/storage.js"></script>
 	<script src="/public/script/dialogModal.js"></script>
 	<script src="/public/script/basicFn.js"></script>
+	<script src="/public/script/topay.js"></script>
+
 	<script>
 		$(function() {
-			animatePoint($('.pay-into-panel'))
 		});
 	</script>
 </body>

@@ -319,6 +319,13 @@
     font-size: 18px;
 }
 
+#go-pay.btn-disabled {
+	color: #fff;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
 /*剩余付款时间*/
 .paytime-down {
 	margin-top: 10px;
@@ -328,4 +335,12 @@
 
 .paytime-down .remain-time {
 	color: #d4282d;
+}
+
+.yx-register-wrap, .yx-login-wrap { margin-top: 11%; }
+
+#payTip {
+	padding-bottom: 70px;
+    font-size: 18px;
+    color: #999;
 }

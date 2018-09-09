@@ -1,0 +1,308 @@
+@charset 'UTF-8';
+
+body, button, dd, dl, dt,
+fieldset, figure, form,
+h1, h2, h3, h4, h5, h6, hr,
+input, legend, li, ol, div,
+p, pre, table, thead, tbody, tr, th, td,
+textarea, ul, a, span, i {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+}
+
+body {
+    min-height: 100%;
+    min-width: 996px;
+    background-color: #eff0f1;
+	overflow-x: hidden;
+}
+
+body, button, code, input, select, textarea {
+    font-family: var(--fontFamily);
+    color: #333;
+    font-size: 13px;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #555;
+}
+
+.yx-fz12 { font-size: 12px; }
+.yx-fz14 { font-size: 14px; }
+.yx-fz16 { font-size: 16px; }
+.yx-fz18 { font-size: 18px; }
+
+.txt-center { text-align: center; }
+
+.ibt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#header {
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 0px;
+}
+
+#header .header-inner {
+    width: 950px;
+    margin: 0 auto;
+}
+
+#header .header-inner .header-title {
+    width: 250px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#header .header-inner .alipay-logo {
+    display: block;
+    width: 114px;
+    position: relative;
+    left: 0;
+    top: 10px;
+    float: left;
+    height: 40px;
+    background: url(https://t.alipayobjects.com/images/T1HHFgXXVeXXXXXXXX.png) no-repeat 0 0;
+}
+
+#header .header-inner .logo-title {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei","微软雅黑","宋体";
+    border-left: 1px solid #676d70;
+    color: #676d70;
+    height: 20px;
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+
+#container {
+    width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#container .row {
+    /*height: 22px;*/
+    overflow: hidden;
+    padding-top: 14px;
+}
+
+#container .content-hd {}
+
+#container .content-hd p:first-child {
+    max-width: 400px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+#container .content-hd p:nth-child(2) { max-width: 180px; }
+
+#container .content-hd p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#container .content-bd {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 950px;
+    min-height: 460px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-bottom: 3px solid #b3b3b3;
+    border-top: 3px solid #b3b3b3;
+}
+
+#container .content-bd .qrcode-area {
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container .qrcode-area .qrcode-hd {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 75px;
+    margin-bottom: 16px;
+}
+
+#container .qrcode-hd .qrcode-money {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f60;
+}
+
+#container .qrcode-area .qrcode-img-wrap {
+    position: relative;
+    width: 181px;
+    height: auto;
+    min-height: 168px;
+    margin: 0 auto;
+    padding: 6px;
+    border: 1px solid #d3d3d3;
+    -webkit-box-shadow: 1px 1px 1px #ccc;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+#container .qrcode-img-wrap .qrcode-img-area {
+    width: 168px;
+    height: 168px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+#container .qrcode-img-wrap #qrcodeImg {
+    display: inline-block;
+    width: 168px;
+    height: 168px;
+}
+
+
+#footer {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    zoom: 1;
+    background-color: #eff0f1;
+}
+
+#footer .copyright a { color: #808080; }
+
+#footer .copyright a:hover { text-decoration: underline; }
+
+#footer .partner {
+    margin-top: 0;
+    padding-top: 0;
+    background-color: #eff0f1;
+    padding: 20px 0 16px;
+    text-align: center;
+}
+
+.fixed-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    opacity: 0;
+}
+
+.fixed-modal .modal-wrap {
+    text-align: center;
+}
+
+.fixed-modal .modal-body {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fixed-modal .modal-wrap > div { display: inline-block; }
+
+.fixed-modal .modal-wrap .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 36px;
+    color: #999;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: transform 0s, color .2s;
+    transform: rotate(0deg);
+}
+
+.fixed-model .model-wrap .close:hover {
+    transform: rotate(360deg);
+    color: #666;
+    transition: transform .5s, color .5s;
+}
+
+.yx-modal-wrap {
+    margin-top: 83px;
+    width: 386px;
+    min-height: 400px;
+}
+
+.yx-modal-wrap .modal-box {
+    width: 386px;
+    padding: 50px 0;
+    background: #fff;
+    height: auto!important;
+    border: 1px solid #F5F3EF;
+    position: relative;
+}
+
+.yx-modal-wrap .modal-box .content {
+    opacity: 0;
+}
+
+.yx-modal-wrap .modal-box .tip {
+    font-size: 18px;
+    padding: 20px 0;
+    color: #999;
+}
+
+#returnIndex {
+    display: inline-block;
+    min-width: 96px;
+    height: 35px;
+    padding: 0 20px;
+    letter-spacing: normal;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    outline: none;
+}
+
+#returnIndex:hover {
+    background: #f1f1f1;
+}
+
+.yx-loading {
+    width: 100%;
+    background: #fff url("/public/images/icon/loading.gif") no-repeat center !important;
+}
