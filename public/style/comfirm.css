@@ -337,7 +337,7 @@
 	color: #d4282d;
 }
 
-.yx-register-wrap, .yx-login-wrap { margin-top: 11%; }
+.yx-login-wrap, .yx-login-wrap { margin-top: 11%; }
 
 #payTip {
 	padding-bottom: 70px;
